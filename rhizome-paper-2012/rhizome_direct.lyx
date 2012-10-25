@@ -1,0 +1,524 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Serval Rhizome: Efficient Data Synchronisation in a Practical Store-and-Forward
+ Network
+\end_layout
+
+\begin_layout Author
+Dr.
+ Paul Gardner-Stephen, Andrew Bettison, Romana Challans, Jennifer Hampton,
+ Jeremy Lakeman, Matthew Lloyd, Daniel O'Connor and Corey Wallis
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+The Serval Project
+\begin_inset CommandInset citation
+LatexCommand cite
+key "servalproject,Gardner-Stephen:2011:SMS:2185216.2185245"
+
+\end_inset
+
+ exists to enable mobile telecommunications in situations where it the prevailin
+g commercial cellular model has difficulties.
+ Examples include in disaster zones, in areas of unrest, in rural and remote
+ settings where population and economic densities are insufficient to sustain
+ cellular services, in areas where terrain makes it difficult to provide
+ ubiquitous coverage, underground, at sea or deep indoors where cellular
+ signals do not penetrate, or simply in situations where the cost of access
+ is a barrier that prevents the realisation of the full range of benefits
+ that mobile telecommunications can provide communities such as facilitating
+ economic growth (XXX cite UN paper that mentions contribution to GDP),
+ that has the potential to prime a community to the point where a more reliable
+ cellular service becomes economically feasible.
+ 
+\end_layout
+
+\begin_layout Standard
+Technologically, the Serval Project is based on two complementary network
+ protocols: Serval Overlay Mesh Protocol (SOMP) and Serval Rhizome (Rhizome).
+ 
+\end_layout
+
+\begin_layout Standard
+SOMP is an IP-like packet-switched network protocol, broadly similar to
+ Internet Protocol version 4 (IPv4), but using cryptographic public keys
+ as the primary network identifier.
+ This protocol is used for instantaneous communications, such as telephone
+ calls, and as such is only useful when end-to-end connections are possible
+ between nodes, and not when the network is partitioned.
+ A full description of SOMP is outside of the scope of this paper.
+ 
+\end_layout
+
+\begin_layout Standard
+Rhizome is a store-and-forward or delay tolerant network (DTN) protocol
+ that is used to provide connectivity on a Serval Mesh irrespective of whether
+ end-to-end connections are available.
+ Rhizome operates on data “bundles”, consisting of a short manifest containing
+ meta-data, and, optionally, an associated file or data stream.
+ 
+\end_layout
+
+\begin_layout Standard
+Together, these network protocols enable the Serval Mesh to maximise delivered
+ capability in a wide variety of environments and conditions.
+\end_layout
+
+\begin_layout Standard
+In an earlier paper
+\begin_inset CommandInset citation
+LatexCommand cite
+key "meshms2012"
+
+\end_inset
+
+ we described the application of Rhizome to create a resilient short message
+ service (MeshMS), but without fully describing the Rhizome protocol itself.
+ Such a description is provided in this paper, including a field trial of
+ Rhizome with the New Zealand Red Cross (NZRC), as well as enhancements
+ that did not exist at the time that the previous paper was written, including
+ improvements made as a result of the NZRC field trial experience.
+ Particular attention is also given in this paper to describing an improved
+ synchronisation protocol for Rhizome traffic between peers, which we call
+ Rhizome Direct.
+\end_layout
+
+\begin_layout Section
+Use-Cases Considered
+\end_layout
+
+\begin_layout Standard
+Before explaining the design and realisation of Serval Rhizome, it is appropriat
+e to explain the main use-cases that have driven that process.
+\end_layout
+
+\begin_layout Subsection
+Highly Partitioned Community Mesh Networks
+\end_layout
+
+\begin_layout Subsection
+Many-Hop Community Mesh Networks
+\end_layout
+
+\begin_layout Subsection
+Humanitarian Field Teams
+\end_layout
+
+\begin_layout Section
+The Rhizome Protocol
+\end_layout
+
+\begin_layout Standard
+When a bundle is created it enters the creator's Rhizome store.
+ Thereafter when nodes come into communication with one another, they inform
+ one another of bundles they possess by exchanging manifests.
+ If they discover the existence of a bundle that they do not already possess,
+ they fetch the corresponding associated file, if any, and then store the
+ bundle into their own Rhizome store.
+ In this way the Rhizome protocol offers a weak form of eventual consistency.
+ 
+\end_layout
+
+\begin_layout Standard
+This is a purposeful design decision, because the primary application of
+ the Serval Mesh technology is in infrastructure and/or connectivity deprived
+ settings.
+ The CAP theorem (Gilbert , S., Lynch, N.
+ 2002.
+ Brewer's conjecture and the feasibility of consistent, available, partition-tol
+erant Web services.
+ ACM SIGACT News 33(2).) states that only two of data consistency, system
+ availability, and tolerance to network partition are possible at any point
+ in time.
+ Since the Serval Mesh is intended to be tolerant to network partitioning,
+ and must endeavour for maximum system availability in order to fulfil its
+ mission of facilitating communications in difficult situations, it is data
+ consistency that must be compromised.
+\end_layout
+
+\begin_layout Subsection
+Bundles & Manifests
+\end_layout
+
+\begin_layout Standard
+As previously mentioned, Rhizome operates on data “bundles”, consisting
+ of a short manifest containing meta-data, and, optionally, an associated
+ file or data stream.
+ Manifests consist of two main parts: the body, which is followed by a single
+ nul character (0x00) which separates it from the second part, the signature
+ block.
+ Rhizome manifests (including the length of any signature block) are limited
+ to 1KB in size, so that they can fit into a single network packet.
+ This greatly simplifies bundle replication by allowing advertisement of
+ a bundle to also accomplish transfer of the manifest, leaving only the
+ associated file, if any, to be transferred.
+\end_layout
+
+\begin_layout Standard
+The manifest body is in plain ASCII, and is composed of key=value lines.
+ For a manifest to be valid it must include at least a single id=<bundleid>
+ line.
+ In practice, manifests should also have a service=<service type> and version=<v
+ersion number>, and there also exist a number of other optional fields.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Example-Rhizome-Manifest."
+
+\end_inset
+
+ shows a sample manifest body.
+ The ASCII key=value structure can be clearly seen, with several fields.
+ The 
+\family typewriter
+service=file
+\family default
+ line indicates that the bundle carries a file that may be opened by any
+ suitable applications.
+ It is planned in a future release to complement the service field with
+ a mime-type field.
+ Next, the optional 
+\family typewriter
+date
+\family default
+ field records the date of creation, in milliseconds since 1970.
+\end_layout
+
+\begin_layout Standard
+The next field is the first of several that describe the associated file.
+ The 
+\family typewriter
+name
+\family default
+ field that provides a display name or description for the bundle.
+ As the bundle represents an ordinary file the name is the name of the file,
+ in this case 
+\family typewriter
+README.WHYNOTSIPS
+\family default
+.
+ The 
+\family typewriter
+filesize
+\family default
+ field indicates the length of the file or associated data, in this case
+ 1,134 bytes, while the 
+\family typewriter
+filehash
+\family default
+ field provides the SHA512 has of the file or associated data so that it
+ can be verified.
+ As all files are referenced by their hash, this also provides an automatic
+ file-level deduplication capability.
+ 
+\end_layout
+
+\begin_layout Standard
+The 
+\family typewriter
+version
+\family default
+ field is used for controlling updates to a data bundle.
+ If a manifest is seen with a higher version number than that held by a
+ node, the node will attempt to replace the old version with the new version.
+ In this way bundles can be updates.
+ Of course, for an updated version of a bundle to be accepted, it must pass
+ the appropriate verification test.
+ Verification of bundles is accomplished by reference to the id field.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout LyX-Code
+service=file
+\end_layout
+
+\begin_layout LyX-Code
+date=1350783439635
+\end_layout
+
+\begin_layout LyX-Code
+name=README.WHYNOTSIPS
+\end_layout
+
+\begin_layout LyX-Code
+filesize=1134 filehash=10988788E80AA1DBE1397906882034B04C8F2C2B7DF78F5E50468FC8B
+ABA7FF0C1315D37115D88A72401A6836892637482F6D25800DBB63BBD1EFE61E59FB9E1
+\end_layout
+
+\begin_layout LyX-Code
+version=1350783439688
+\end_layout
+
+\begin_layout LyX-Code
+id=BC714C5D48DDBF9788766AD6DC47A0B9F3C602EDEAD5619E329A40AE74FAD3AB
+\end_layout
+
+\begin_layout LyX-Code
+BK=D733D5459D367F440D5AF43216A10FB0101319DF5AF8F0A25670EB34613AAA8E
+\end_layout
+
+\begin_layout LyX-Code
+crypt=0
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Example-Rhizome-Manifest."
+
+\end_inset
+
+Example Rhizome Manifest.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The ID field corresponds to the Bundle ID (BID), which is in turn a public
+ key in the Curve25519(XXX cite Curve25519 paper) Elliptic Curve Cryptography
+ key space as implemented in the CryptoSign Ed25519 primitives of the 2012525
+ release of supercop (XXX link to super cop, and cite any relevant paper).
+ That implementation was chosen over the version included in the XXX release
+ of the NaCl library, because it runs approximately 20x faster on ARM-based
+ Android phones, making it compelling for use in the Serval Project.
+ For example, on an R500 handset (800MHz ARM6l) the supercop implementation
+ can verify a signature in 13ms versus approximately 300ms for the original
+ NaCl implementation.
+ During the work described in this paper, this version was found to be incompati
+ble with the version included in the NaCl library, and so the supercop implement
+ation is used exclusively, regardless of host architecture.
+ Other primitives from the NaCl library continue to be used.
+ Parties wishing to make software compatible with the Serval Project's cryptogra
+phic functions should make use of the merged NaCl implementation in the
+ 
+\family typewriter
+src/nacl
+\family default
+ directory of 
+\family typewriter
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://github.com/servalproject/serval-dna/
+\end_layout
+
+\end_inset
+
+
+\family default
+.
+ While the Serval Project as a whole is licensed under GPL, the NaCl library
+ is in the public domain, and can be extracted from the Serval Project's
+ source code repository on that basis.
+\end_layout
+
+\begin_layout Standard
+As the BID is a public key, it is possible for the creator of a bundle to
+ sign the bundle's manifest using the corresponding private key, since they
+ presumably possess the private key.
+ In a like manner, the creator of a bundle can create a new version of a
+ bundle by updating the manifest and resigning it.
+ Assuming that the creator of bundles wishes to maintain this ability to
+ modify bundles that they have created in the future, there must be a mechanism
+ for storing the private key of each bundle.
+ One option would be a local key-ring on the creator's device.
+ An alternative option is to store an encrypted version of the private key
+ in the manifest itself, so that the private key can be recovered when required.
+ This avoids the need for a keyring on the creator's device, which offers
+ certain advantages, particularly in the case where a device is shared by
+ multiple parties, or where the operator of a device wishes to maintain
+ multiple identities with differing security levels, both to keep the private
+ keys safe and also to provide plausible deniability of ownership of the
+ keys should the need arise.
+\end_layout
+
+\begin_layout Standard
+The storage of encrypted private keys in a manifest is accomplished using
+ the Bundle Key (BK) field.
+ The BK field is computed according to BK=sha512(BID##RS##BID), where sha512()
+ is the SHA512 hash function, ## is the concatenation operator, BID is the
+ bundle ID, and RS is the Rhizome Secret.
+ The Rhizome Secret is a 1KB block of random data held in the Serval keyring.
+ The BID##RS##BID formulation is designed such that if it proves possible
+ to partially reverse the SHA512 hash function such that the state can be
+ recovered after hashing BID##RS, it cannot be used as a proxy for the RS
+ for other bundles.
+ This is in contrast to an earlier version of Rhizome where sha512(RS##BID)
+ was used, and deducing the internal state of sha512(RS) would allow impersonati
+on of ownership for any bundle.
+\end_layout
+
+\begin_layout Standard
+The manifest signature block consists of one or more signatures concatenated
+ XXX.
+\end_layout
+
+\begin_layout Section
+New Zealand Red Cross KiwiEx 2012 Field Trial 
+\end_layout
+
+\begin_layout Standard
+One use-case that has been trialled by the authors in conjunction with New
+ Zealand Red Cross is communications amongst humanitarian field teams and
+ staff.
+ In that trial four teams, usually each consisting of four people operated
+ in an area spanning approximately 100km by 50km on the North Island of
+ New Zealand during the KiwiEx 2012 training exercise.
+ Huawei IDEOS X1 smart-phones running the CyanogenMod 7 variant of Android
+ had the Serval Mesh software installed and were supplied to all personnel
+ on the exercise.
+ Each team was also supplied with a de Lorme inReach satellite short-burst-data
+ unit, capable of pairing with an Android phone via BlueTooth.
+ The mesh was formed using ad-hoc WiFi with a typical line-of-sight range
+ of 100m, and was used to collect GPS traces of team movements, GIS records
+ and photographs of sites visited, as well as distribute maps and operational
+ information to personnel.
+ The mesh was also used to facilitate short-message communications among
+ personnel.
+\end_layout
+
+\begin_layout Standard
+While members of a given team were typically within direct communications
+ range of one another, each team was typically separated by tens of kilometres
+ of steep terrain, and direct mesh communications were not possible.
+ Thus a store-and-forward communications protocol was necessary for sharing
+ data among teams, the caveat being that teams needed to come into close
+ contact at some point for the communications to be shared.
+ While this caveat of requiring close proximity for information sharing
+ was not problematic for sharing maps and operational information at the
+ field camp.
+ It was also reasonable, though not ideal, for sharing images and GIS records
+ of use to subsequent team missions to the same locations and later analysis.
+ However, for applications such as short-messaging it was quite unacceptable.
+ 
+\end_layout
+
+\begin_layout Standard
+To mitigate this, the Serval Mesh software was modified to route MeshMS
+ short message traffic via the inReach units if local delivery via the mesh
+ was not possible.
+ 
+\end_layout
+
+\begin_layout Section*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+The authors wish to acknowledge the support of the Awesome Foundation, Flinders
+ University, the NLnet Foundation, the Shuttleworth Foundation the New America
+ Foundation, and individual donors and contributors, who have financially
+ and otherwise supported the work of the Serval Project.
+\end_layout
+
+\begin_layout Section*
+References
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "rfc,serval"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
