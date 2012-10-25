@@ -160,6 +160,13 @@ Use-Cases Considered
 \begin_layout Standard
 Before explaining the design and realisation of Serval Rhizome, it is appropriat
 e to explain the main use-cases that have driven that process.
+ In reality, this has been an iterative process, where the initial use case
+ of humanitarian application drove preliminary development to the point
+ where it could be trialed 
+\end_layout
+
+\begin_layout Subsection
+Humanitarian Field Teams
 \end_layout
 
 \begin_layout Subsection
@@ -168,10 +175,6 @@ Highly Partitioned Community Mesh Networks
 
 \begin_layout Subsection
 Many-Hop Community Mesh Networks
-\end_layout
-
-\begin_layout Subsection
-Humanitarian Field Teams
 \end_layout
 
 \begin_layout Section
