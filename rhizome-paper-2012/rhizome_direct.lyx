@@ -153,7 +153,7 @@ Rhizome is a store-and-forward or delay tolerant networking (DTN) and content
  centric networking
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Jacobson:2009:NNC:1658939.1658941"
+key "CANE,Jacobson:2009:NNC:1658939.1658941"
 
 \end_inset
 
@@ -299,6 +299,10 @@ As previously mentioned, Rhizome operates on data “bundles”, consisting
  This greatly simplifies bundle replication by allowing advertisement of
  a bundle to also accomplish transfer of the manifest, leaving only the
  associated file, if any, to be transferred.
+\end_layout
+
+\begin_layout Subsubsection
+Rhizome Manifest Body Block
 \end_layout
 
 \begin_layout Standard
@@ -502,9 +506,29 @@ http://bench.cr.yp.to/
 \end_inset
 
 .
- That implementation was chosen over the version included in the XXX release
- of the NaCl library, because it runs approximately 20x faster on ARM-based
- Android phones, making it compelling for use in the Serval Project.
+ That implementation was chosen over the version included in the 20110221
+ release of the NaCl library
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://hyperelliptic.org/nacl/nacl-20110221.tar.bz2
+\end_layout
+
+\end_inset
+
+; on-line; accessed 29 October 2012.
+\end_layout
+
+\end_inset
+
+, because it runs approximately 20x faster on ARM-based Android phones,
+ making it compelling for use in the Serval Project.
  For example, on an R500 handset (800MHz ARM6l) the supercop implementation
  can verify a signature in 13ms versus approximately 270ms for the original
  NaCl implementation.
@@ -582,9 +606,114 @@ where sha512() is the SHA512 hash function, ## is the concatenation operator,
 on of ownership for any bundle.
 \end_layout
 
+\begin_layout Subsubsection
+Rhizome Manifest Signature Block
+\end_layout
+
 \begin_layout Standard
-The manifest signature block consists of one or more signatures concatenated
- XXX.
+The manifest signature block consists of one or more concatenated signatures.
+ Each signature consists of a combined length-and-type byte, consisting
+ of the lower six bits for signature length minus 4-byte in 4-byte units,
+ and the upper two bits of disambiguation.
+ This allows for four signing algorithms or modes for each signature length
+ between 4 and 256 bytes in a forward-compatible manner.
+ 
+\end_layout
+
+\begin_layout Standard
+At present the only value allocated is 0x17 for CryptoSign signatures with
+ a length of 96 bytes.
+ CryptoSign signatures are normally 128 bytes, with 32 of those bytes being
+ the hash of the message being signed.
+ As we know the hash of the message, in this case of the manifest body,
+ it is not necessary to transmit the hash as part of the signature, resulting
+ in the corresponding space saving for each and every CryptoSign signature
+ attached to a given manifest.
+ See Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Example-Rhizome-Manifest-Signature-Block"
+
+\end_inset
+
+ for an example signature block containing a single CryptoSign signature.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout LyX-Code
+
+\family typewriter
+17 fc ab a1 96 2f 63 e0 a4 94 55 da 8b b6 a7 fe
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+ae 9b a2 38 7d 81 5e 19 60 df 20 06 cd 79 d7 5b
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+9b 79 d3 b3 3e f1 ca 62 68 0b 9a 99 22 08 a8 d9
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+69 97 70 bc 61 67 53 4a 56 9e 03 1f e9 19 d6 14
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+00 bc 71 4c 5d 48 dd bf 97 88 76 6a d6 dc 47 a0
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+b9 f3 c6 02 ed ea d5 61 9e 32 9a 40 ae 74 fa d3
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+ab
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Example-Rhizome-Manifest-Signature-Block"
+
+\end_inset
+
+Example Rhizome Manifest Signature Block.
+ Consists of a single signature with type-and-length identifer 0x17, i.e.,
+ a CryptoSign signature.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -651,10 +780,6 @@ The authors wish to acknowledge the support of the Awesome Foundation, Flinders
  University, the NLnet Foundation, the Shuttleworth Foundation the New America
  Foundation, and individual donors and contributors, who have financially
  and otherwise supported the work of the Serval Project.
-\end_layout
-
-\begin_layout Section*
-References
 \end_layout
 
 \begin_layout Standard
