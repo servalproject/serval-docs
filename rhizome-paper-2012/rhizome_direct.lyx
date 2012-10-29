@@ -121,12 +121,18 @@ SOMP is an IP-like packet-switched network protocol, broadly similar to
 \end_layout
 
 \begin_layout Standard
-Rhizome is a store-and-forward or delay tolerant network (DTN) protocol
- that is used to provide connectivity on a Serval Mesh irrespective of whether
- end-to-end connections are available.
+Rhizome is a store-and-forward or delay tolerant networking (DTN) and content
+ centric networking
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jacobson:2009:NNC:1658939.1658941"
+
+\end_inset
+
+ (CCN) protocol that is used to provide connectivity on a Serval Mesh irrespecti
+ve of whether end-to-end connections are available.
  Rhizome operates on data “bundles”, consisting of a short manifest containing
  meta-data, and, optionally, an associated file or data stream.
- 
 \end_layout
 
 \begin_layout Standard
@@ -160,21 +166,59 @@ Use-Cases Considered
 \begin_layout Standard
 Before explaining the design and realisation of Serval Rhizome, it is appropriat
 e to explain the main use-cases that have driven that process.
- In reality, this has been an iterative process, where the initial use case
- of humanitarian application drove preliminary development to the point
- where it could be trialed 
+ 
 \end_layout
 
 \begin_layout Subsection
 Humanitarian Field Teams
 \end_layout
 
+\begin_layout Standard
+In this use case we consider NGOs and related organisations operating in
+ the field, perhaps in response to a natural disaster.
+ This use-case is characterised by a lack of supporting infrastructure,
+ such as internet access, and self-sufficiency of the network is critical.
+ As such deployments are often at short notice, the ability of the network
+ to self-organise and operate with either zero or limited configuration
+ are important features.
+\end_layout
+
+\begin_layout Standard
+Communications needs include the ability to disseminate operational information
+ to field teams and workers, and for field teams to be able to communicate
+ among themselves, and collect situational awareness information that can
+ be shared both with an operations centre as well as members of their own
+ and other field teams.
+\end_layout
+
 \begin_layout Subsection
 Highly Partitioned Community Mesh Networks
 \end_layout
 
+\begin_layout Standard
+In many situations it is anticipated that there will be too few mesh devices
+ to allow the formation of a contiguous mesh network.
+ For example, a few people in a large community may have mesh-enabled devices,
+ and only occassionally be in range of another mesh device.
+ As a result, it is expected that partitioning of the network into a number
+ of smaller meshes --- and possibly lone nodes --- will be a common occurrence.
+\end_layout
+
+\begin_layout Standard
+Communications needs include the ability to produce and exchange SMS-like
+ messages and Twitter and Facebook-like social media content.
+\end_layout
+
 \begin_layout Subsection
-Many-Hop Community Mesh Networks
+Extensive and/or Many-Hop Community Mesh Networks
+\end_layout
+
+\begin_layout Standard
+For situations where a contiguous mesh can be sustained, the mesh is likely
+ to be larger than any end-to-end mesh routing protocol, such as BATMAN(XXX
+ cite), BABEL(XXX cite) or OLSR(XXX cite) can support.
+ Nonetheless, users of such a network will wish to be able to exchange the
+ same types of traffic as in the preceeding use-case.
 \end_layout
 
 \begin_layout Section
@@ -196,13 +240,15 @@ When a bundle is created it enters the creator's Rhizome store.
 This is a purposeful design decision, because the primary application of
  the Serval Mesh technology is in infrastructure and/or connectivity deprived
  settings.
- The CAP theorem (Gilbert , S., Lynch, N.
- 2002.
- Brewer's conjecture and the feasibility of consistent, available, partition-tol
-erant Web services.
- ACM SIGACT News 33(2).) states that only two of data consistency, system
- availability, and tolerance to network partition are possible at any point
- in time.
+ The CAP theorem states that at most two of data consistency, system availabilit
+y, and tolerance to network partition are possible at any point in time
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gilbert:2002:BCF:564585.564601"
+
+\end_inset
+
+.
  Since the Serval Mesh is intended to be tolerant to network partitioning,
  and must endeavour for maximum system availability in order to fulfil its
  mission of facilitating communications in difficult situations, it is data
@@ -371,12 +417,32 @@ Example Rhizome Manifest.
 The ID field corresponds to the Bundle ID (BID), which is in turn a public
  key in the Curve25519(XXX cite Curve25519 paper) Elliptic Curve Cryptography
  key space as implemented in the CryptoSign Ed25519 primitives of the 2012525
- release of supercop (XXX link to super cop, and cite any relevant paper).
+ release of supercop
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://bench.cr.yp.to/
+\end_layout
+
+\end_inset
+
+; on-line; accessed 29 October 2012.
+\end_layout
+
+\end_inset
+
+.
  That implementation was chosen over the version included in the XXX release
  of the NaCl library, because it runs approximately 20x faster on ARM-based
  Android phones, making it compelling for use in the Serval Project.
  For example, on an R500 handset (800MHz ARM6l) the supercop implementation
- can verify a signature in 13ms versus approximately 300ms for the original
+ can verify a signature in 13ms versus approximately 270ms for the original
  NaCl implementation.
  During the work described in this paper, this version was found to be incompati
 ble with the version included in the NaCl library, and so the supercop implement
@@ -515,7 +581,7 @@ References
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "rfc,serval"
+bibfiles "rfc,serval,cnn,networking,crypto"
 options "plain"
 
 \end_inset
