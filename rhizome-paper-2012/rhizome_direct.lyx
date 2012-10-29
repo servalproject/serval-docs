@@ -71,9 +71,37 @@ Serval Rhizome: Efficient Data Synchronisation in a Practical Store-and-Forward
 \end_layout
 
 \begin_layout Author
-Dr.
- Paul Gardner-Stephen, Andrew Bettison, Romana Challans, Jennifer Hampton,
- Jeremy Lakeman, Matthew Lloyd, Daniel O'Connor and Corey Wallis
+Paul Gardner-Stephen, Andrew Bettison,
+\begin_inset Newline newline
+\end_inset
+
+Romana Challans, Jennifer Hampton,
+\begin_inset Newline newline
+\end_inset
+
+Jeremy Lakeman, Matthew Lloyd*,
+\begin_inset Newline newline
+\end_inset
+
+Daniel O'Connor and Corey Wallis
+\begin_inset Newline newline
+\end_inset
+
+Flinders University and New Zealand Red Cross(*).
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+{paul,andrew,romana,jenny,jeremy}@servalproject.org,
+\begin_inset Newline newline
+\end_inset
+
+matthew.lloyd@redcross.org.nz,
+\begin_inset Newline newline
+\end_inset
+
+{daniel,corey}@servalproject.org,
 \end_layout
 
 \begin_layout Section
@@ -366,8 +394,23 @@ name=README.WHYNOTSIPS
 \end_layout
 
 \begin_layout LyX-Code
-filesize=1134 filehash=10988788E80AA1DBE1397906882034B04C8F2C2B7DF78F5E50468FC8B
-ABA7FF0C1315D37115D88A72401A6836892637482F6D25800DBB63BBD1EFE61E59FB9E1
+filesize=1134
+\end_layout
+
+\begin_layout LyX-Code
+filehash=10988788E80AA1DBE1397906882034B04C8F2C2B7DF78
+\backslash
+
+\begin_inset Newline newline
+\end_inset
+
+F5E50468FC8BABA7FF0C1315D37115D88A72401A6836892637482F
+\backslash
+
+\begin_inset Newline newline
+\end_inset
+
+6D25800DBB63BBD1EFE61E59FB9E1
 \end_layout
 
 \begin_layout LyX-Code
@@ -375,11 +418,23 @@ version=1350783439688
 \end_layout
 
 \begin_layout LyX-Code
-id=BC714C5D48DDBF9788766AD6DC47A0B9F3C602EDEAD5619E329A40AE74FAD3AB
+id=BC714C5D48DDBF9788766AD6DC47A0B9F3C602EDEAD5619E329
+\backslash
+
+\begin_inset Newline newline
+\end_inset
+
+A40AE74FAD3AB
 \end_layout
 
 \begin_layout LyX-Code
-BK=D733D5459D367F440D5AF43216A10FB0101319DF5AF8F0A25670EB34613AAA8E
+BK=D733D5459D367F440D5AF43216A10FB0101319DF5AF8F0A2567
+\backslash
+
+\begin_inset Newline newline
+\end_inset
+
+0EB34613AAA8E
 \end_layout
 
 \begin_layout LyX-Code
@@ -401,6 +456,9 @@ name "fig:Example-Rhizome-Manifest."
 \end_inset
 
 Example Rhizome Manifest.
+ Note that the line-breaks are purely for rendering purposes, and should
+ not be broken as depicted here, i.e., the Rhizome manifest parser will not
+ rejoin split lines.
 \end_layout
 
 \end_inset
@@ -415,9 +473,15 @@ Example Rhizome Manifest.
 
 \begin_layout Standard
 The ID field corresponds to the Bundle ID (BID), which is in turn a public
- key in the Curve25519(XXX cite Curve25519 paper) Elliptic Curve Cryptography
- key space as implemented in the CryptoSign Ed25519 primitives of the 2012525
- release of supercop
+ key in the Curve25519
+\begin_inset CommandInset citation
+LatexCommand cite
+key "curve25519"
+
+\end_inset
+
+ Elliptic Curve Cryptography key space as implemented in the CryptoSign
+ Ed25519 primitives of the 2012525 release of supercop
 \begin_inset Foot
 status collapsed
 
@@ -498,14 +562,21 @@ As the BID is a public key, it is possible for the creator of a bundle to
 \begin_layout Standard
 The storage of encrypted private keys in a manifest is accomplished using
  the Bundle Key (BK) field.
- The BK field is computed according to BK=sha512(BID##RS##BID), where sha512()
- is the SHA512 hash function, ## is the concatenation operator, BID is the
- bundle ID, and RS is the Rhizome Secret.
+ The BK field is computed according to:
+\end_layout
+
+\begin_layout Quotation
+BK=sha512(BID##RS##BID)
+\end_layout
+
+\begin_layout Standard
+where sha512() is the SHA512 hash function, ## is the concatenation operator,
+ BID is the bundle ID, and RS is the Rhizome Secret.
  The Rhizome Secret is a 1KB block of random data held in the Serval keyring.
  The BID##RS##BID formulation is designed such that if it proves possible
- to partially reverse the SHA512 hash function such that the state can be
- recovered after hashing BID##RS, it cannot be used as a proxy for the RS
- for other bundles.
+ to partially reverse the SHA512 hash function, such that the internal state
+ can be recovered after hashing BID##RS, it cannot be used as a proxy for
+ the RS for other bundles.
  This is in contrast to an earlier version of Rhizome where sha512(RS##BID)
  was used, and deducing the internal state of sha512(RS) would allow impersonati
 on of ownership for any bundle.
@@ -517,7 +588,15 @@ The manifest signature block consists of one or more signatures concatenated
 \end_layout
 
 \begin_layout Section
-New Zealand Red Cross KiwiEx 2012 Field Trial 
+New Zealand Red Cross 
+\begin_inset Quotes eld
+\end_inset
+
+KiwiEx
+\begin_inset Quotes erd
+\end_inset
+
+ 2012 Field Trial 
 \end_layout
 
 \begin_layout Standard
