@@ -214,7 +214,14 @@ reference "tab:Performance-of-Several"
 \end_inset
 
  where the performance of each of those compressors on the individual messages
- of the SMAZ sample messages of Table XXX is shown.
+ of the SMAZ sample messages of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:SMAZ-sample-message"
+
+\end_inset
+
+ is shown.
 \end_layout
 
 \begin_layout Standard
@@ -1154,7 +1161,7 @@ Uncompressed and compressed sizes of the SMAZ sample message set for several
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -1597,8 +1604,576 @@ SMAZ sample message set, as extracted from SMAZ source code.
 Existing Short Message Compression Schemes
 \end_layout
 
+\begin_layout Standard
+The logical solution to the challenge of compressing short strings such
+ as SMS messages, is to pre-compute a dictionary that then does not need
+ to be embedded in each compressed message.
+ This is indeed the approach taken by several existing efforts.
+\end_layout
+
 \begin_layout Subsection
 GSM TS03.42
+\end_layout
+
+\begin_layout Standard
+Between 1997 and 1999 the GSM Association (GSMA) developed Technical Standard
+ 03.42 (XXX cite), a standard for compression of SMS messages.
+ At the time Arithmetic Coding was possibly patent encumbered, and perhaps
+ for that reason and the relatively higher computation demands of that scheme,
+ TS03.42 uses Huffman Coding (XXX cite), in return for a reduction in the
+ compression possible.
+ They begin with a language-specific frequency table and common word list
+ to provide initial context.
+ The frequency table is optionally evolved as a message is compressed providing
+ some adaptability, although the word list is fixed.
+\end_layout
+
+\begin_layout Standard
+The technical standard itself is accompanied by three sample SMS messages
+ (see Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:GSMA-TS03.42-Example"
+
+\end_inset
+
+) and their compressed forms, giving some idea of the compression levels
+ that it can achieve, which is summarised in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Performance-of-GSM"
+
+\end_inset
+
+.
+ It is apparent that the GSMA seemed to assume SMS being used for carrying
+ longer email-like messages, and apparently by pedants for spelling and
+ grammar, somewhat amplifying the apparent effectiveness of their scheme.
+ Empirical examination of SMS and Twitter traffic suggests that those assumption
+s are flawed, and that in practice, TS03.42 would be likely to offer poorer
+ compression than suggested by their contrived, if well meaning, examples.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="11cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Text
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Please call me no later than 07:30 on Wednesday morning so that we can discuss
+ the project before the meeting.
+ I will be at the hotel from Tuesday afternoon so if convenient for you
+ we could arrange to have dinner there.
+ If anything urgent comes up before then remember you can always call me
+ on my mobile or send me a short message.
+ Speak to you soon, Peter
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+David, I'm on my way to the airport for the 9 o'clock flight to Paris.
+ I'll be out of the office until tomorrow so please postpone the lunch appointme
+nt with Steven and Julie.
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+I contacted the supplier yesterday and they should confirm delivery of the
+ following products by the weekend.
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+AFP/956/A : 5000 units
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+ANF/234/S : 100 units
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+XXL/00789 : 9000 units
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+UXB/11008 : 7500 units
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+If you need more information call their sales department and quote order
+ reference ST009/678.
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+Best regards, Carol
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+Thank you for your enquiry.
+ The following services are currently available:
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+001 - International news headlines
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+002 - Local news headlines
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+011 - Sport - Football
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+012 - Sport - Cricket
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+013 - Sport - Racing
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+014 - Sport - Other
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+021 - Stock quotes A-F
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+021 - Stock quotes G-M
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+021 - Stock quotes N-T
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+021 - Stock quotes U-Z
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+031 - Traffic reports
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+032 - Train timetables
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+033 - Flight information
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+041 - Weather - local reports
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+042 - Weather - local forecasts
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+043 - Weather - national outlook
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+051 - Account information
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+052 - Change password
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+053 - Set preferences
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+061 - Send Fax
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+062 - Send Email
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+063 - Review inbox
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:GSMA-TS03.42-Example"
+
+\end_inset
+
+GSMA TS03.42 Example SMS Messages.
+ Note that the apparently erroneous repetition of 021 appears in the original
+ file downloaded from the GSMA.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uncompressed
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TS03.42
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SMAZ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+358
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+146
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+117
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+491
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+249
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+218
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+601
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+380
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+304
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Performance-of-GSM"
+
+\end_inset
+
+Uncompressed and GSM TS03.42 and SMAZ compressed sizes of the TS03.42 example
+ messages.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
