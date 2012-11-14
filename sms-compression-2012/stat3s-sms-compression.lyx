@@ -109,6 +109,87 @@ Loss-less compression is a mature field, with a wide variety of methodologies
  strings that are already quite short, combined with the relative difficulty
  of compressing strings that are so short that they have little opportunity
  to expose sufficient redundancy to allow for effective compression.
+ 
+\end_layout
+
+\begin_layout Standard
+Thus, even for cellular Short Message Service (SMS) traffic, where message
+ volumes are enormous, relatively little effort has been invested.
+ The GSMA did create a standard for SMS compression, TS03.42 (XXX cite),
+ but it is difficult to ascertain whether it has been widely adopted by
+ carriers, and the standard itself has not been updated since 1999, even
+ though attractive compression technologies such as Arithmetic Coding (XXX
+ cite) have lapsed from patent encumberance since that time.
+ Perhaps for mobile telecommunications carriers the disinterest is simply
+ commercial; they charge per message unit of 144 bytes, and reducing the
+ number of messages required for parties to communicate would be revenue-negativ
+e.
+ 
+\end_layout
+
+\begin_layout Standard
+Of course, for consumers, the situation is different, because they consumers
+ pay carriers per message unit.
+ The impressive cost charged per message unit by mobile telecommunications
+ carriers, introduces the potential for SMS compression to be revenue-positive.
+ 
+\end_layout
+
+\begin_layout Standard
+Indeed, the cost savings are sufficient that a number of companies have
+ based their business model around compressed-SMS services (XXX cite SMSzipper.co
+m, paninikeypad.com and clevertexting.com), and claim reductions in message
+ sizes of between 30% --- 40% (XXX cite clevertexting.com) and 50% ---- 55%
+ (XXX cite smszipper.com).
+ However, as commercial solutions, these claims cannot be easily verified
+ nor is the source code available to allow meaningful benchmarking against
+ other options.
+ The advent of two-way satellite SMS services, such as the deLorme inReach
+ that uses the Iridium constellation, have created further incentive for
+ compression of messages, as Iridium charges the service providers a substantial
+ fee per byte.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, over-the-top services such as Serval MeshMS (XXX cite) and Serval
+ Rhizome (XXX cite) synchronisation via inReach, where substantial traffic
+ may be generated, have created a pressing need for effective SMS compression
+ to minimise the operating costs for emergency and disaster responce organisatio
+ns that may wish to use the technology.
+ It is this which was the motivation for the work described in this paper.
+\end_layout
+
+\begin_layout Standard
+The remainder of this paper briefly explores: the technical challenges to
+ compressing short messages; a survey of existing compression schemes appropriat
+e for use on SMS-length messages; an introduction to our new stats3 SMS
+ compression scheme, including a comparison with the existing state-of-the-art,
+ showing that our scheme substantially outperforms all public SMS compression
+ systems, and matches or outperforms the unverified marketing claims of
+ the commercial offerings; finally, we outline several areas for future
+ work that we believe have the potential to further improve the performance
+ of stats3.
+\end_layout
+
+\begin_layout Section
+Challenges of Compressing of Short Messages
+\end_layout
+
+\begin_layout Section
+Existing Short Message Compression Schemes
+\end_layout
+
+\begin_layout Section
+Introduction to stats3 Short Message Compression Scheme
+\end_layout
+
+\begin_layout Section
+Results & Conclusions
+\end_layout
+
+\begin_layout Section
+Future Work
 \end_layout
 
 \end_body
