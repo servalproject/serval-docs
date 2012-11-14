@@ -1729,7 +1729,7 @@ nt degree of compression.
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2624,7 +2624,7 @@ Future Work
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "sms-compression,serval,sms-corpus"
+bibfiles "sms-compression,serval,sms-corpus,wiki,dash"
 options "plain"
 
 \end_inset
