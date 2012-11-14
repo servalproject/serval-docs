@@ -118,8 +118,14 @@ Thus, even for cellular Short Message Service (SMS) traffic, where message
  The GSMA did create a standard for SMS compression, TS03.42 (XXX cite),
  but it is difficult to ascertain whether it has been widely adopted by
  carriers, and the standard itself has not been updated since 1999, even
- though attractive compression technologies such as Arithmetic Coding (XXX
- cite) have lapsed from patent encumberance since that time.
+ though attractive compression technologies such as Arithmetic Coding
+\begin_inset CommandInset citation
+LatexCommand cite
+key "214771,DBLP:journals/ibmrd/RissanenL79,fastarithmeticcoding05sanko,howard92analysis,howard94arithmetic,langdon84arithmetic"
+
+\end_inset
+
+ have lapsed from patent encumberance since that time.
  Perhaps for mobile telecommunications carriers the disinterest is simply
  commercial; they charge per message unit of 160 7-bit characters, i.e., 140
  8-bit bytes, and reducing the number of messages required for parties to
@@ -1644,8 +1650,14 @@ Between 1997 and 1999 the GSM Association (GSMA) developed Technical Standard
  03.42 (XXX cite), a standard for compression of SMS messages.
  At the time Arithmetic Coding was possibly patent encumbered, and perhaps
  for that reason and the relatively higher computation demands of that scheme,
- TS03.42 uses Huffman Coding (XXX cite), in return for a reduction in the
- compression possible.
+ TS03.42 uses Huffman Coding
+\begin_inset CommandInset citation
+LatexCommand cite
+key "huffman52,vanleeuwen76huffmantrees,gallager78variations,DBLP:journals/tit/FergusonR84,DBLP:journals/ipl/Jakobsson78"
+
+\end_inset
+
+, in return for a reduction in the compression possible.
  They begin with a language-specific frequency table and common word list
  to provide initial context.
  The frequency table is optionally evolved as a message is compressed providing
@@ -2272,7 +2284,14 @@ The performance of SMAZ on the three English text TS03.42 sample messages
  Observed average compressed message lengths were in or near the upper end
  of the claimed range for English text, suggesting typical compression is
  a little worse.
- See Table XXX for a summary of SMAZ performance on a variety of inputs.
+ See Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:SMAZ-compression-performance"
+
+\end_inset
+
+ for a summary of SMAZ performance on a variety of inputs.
  For example, compresses to 60.6% of original size, while the README file
  of SMAZ itself compresses to 64.1% of original size.
 \end_layout
