@@ -121,9 +121,9 @@ Thus, even for cellular Short Message Service (SMS) traffic, where message
  though attractive compression technologies such as Arithmetic Coding (XXX
  cite) have lapsed from patent encumberance since that time.
  Perhaps for mobile telecommunications carriers the disinterest is simply
- commercial; they charge per message unit of 144 bytes, and reducing the
- number of messages required for parties to communicate would be revenue-negativ
-e.
+ commercial; they charge per message unit of 160 7-bit characters, i.e., 140
+ 8-bit bytes, and reducing the number of messages required for parties to
+ communicate would be revenue-negative.
  
 \end_layout
 
@@ -152,24 +152,55 @@ m, paninikeypad.com and clevertexting.com), and claim reductions in message
 \end_layout
 
 \begin_layout Standard
-Finally, over-the-top services such as Serval MeshMS (XXX cite) and Serval
- Rhizome (XXX cite) synchronisation via inReach, where substantial traffic
- may be generated, have created a pressing need for effective SMS compression
- to minimise the operating costs for emergency and disaster responce organisatio
-ns that may wish to use the technology.
- It is this which was the motivation for the work described in this paper.
+The desire to compress SMS and Twitter-like messages is heightened for systems
+ such as the Serval Project where communications are encrypted and authenticated
+ for security, introducing unavoidable and uncompressible overhead to each
+ message in the form of digital signatures 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mahmoud09hybridcompression"
+
+\end_inset
+
+.
+ The Serval Project 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gardner-Stephen:2011:SMS:2185216.2185245,meshms2012,servalproject"
+
+\end_inset
+
+ is a mobile ad-hoc network that provides resilient communications for rural,
+ remote and disaster situations.
+ In such networks, bandwidth is often limited, and clusters of nodes may
+ be isolated from one another, and satellite SMS services may be the backhaul
+ of last resort.
+ 
 \end_layout
 
 \begin_layout Standard
-The remainder of this paper briefly explores: the technical challenges to
- compressing short messages; a survey of existing compression schemes appropriat
-e for use on SMS-length messages; an introduction to our new stats3 SMS
- compression scheme, including a comparison with the existing state-of-the-art,
- showing that our scheme substantially outperforms all public SMS compression
- systems, and matches or outperforms the unverified marketing claims of
- the commercial offerings; finally, we outline several areas for future
- work that we believe have the potential to further improve the performance
- of stats3.
+The Serval Project offers SMS-like short messaging and Twitter-like social
+ networking services
+\begin_inset CommandInset citation
+LatexCommand cite
+key "meshms2012"
+
+\end_inset
+
+; thus the motivation for identifying effective compression schemes that
+ can be effective on SMS-length messages of the kind commonly observed on
+ Twitter.
+\end_layout
+
+\begin_layout Standard
+The remainder of this paper briefly explores: technical challenges to compressin
+g short messages; a survey of existing compression schemes appropriate for
+ use on SMS-length messages; an introduction to our new stats3 SMS compression
+ scheme, including a comparison with the existing state-of-the-art, showing
+ that our scheme substantially outperforms all public SMS compression systems,
+ and matches or outperforms the unverified marketing claims of the commercial
+ offerings; finally, we outline several areas for future work that we believe
+ have the potential to further improve the performance of stats3.
 \end_layout
 
 \begin_layout Section
@@ -229,6 +260,26 @@ reference "tab:SMAZ-sample-message"
 wide false
 sideways false
 status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Performance-of-Several"
+
+\end_inset
+
+Uncompressed and compressed sizes of the SMAZ sample message set for several
+ high-performance compression schemes.
+ Smallest size for each message is underlined.
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \noindent
@@ -1128,30 +1179,6 @@ paq8l
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Performance-of-Several"
-
-\end_inset
-
-Uncompressed and compressed sizes of the SMAZ sample message set for several
- high-performance compression schemes.
- Smallest size for each message is underlined.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1162,6 +1189,24 @@ Uncompressed and compressed sizes of the SMAZ sample message set for several
 wide false
 sideways false
 status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:SMAZ-sample-message"
+
+\end_inset
+
+SMAZ sample message set, as extracted from SMAZ source code.
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \noindent
@@ -1573,28 +1618,6 @@ http://github.com/antirez/smaz/tree/master
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:SMAZ-sample-message"
-
-\end_inset
-
-SMAZ sample message set, as extracted from SMAZ source code.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1608,7 +1631,8 @@ Existing Short Message Compression Schemes
 The logical solution to the challenge of compressing short strings such
  as SMS messages, is to pre-compute a dictionary that then does not need
  to be embedded in each compressed message.
- This is indeed the approach taken by several existing efforts.
+ This is indeed the approach taken by extant SMS compression schemes, of
+ which the following are perhaps the most prominent.
 \end_layout
 
 \begin_layout Subsection
@@ -1646,21 +1670,90 @@ reference "tab:Performance-of-GSM"
 \end_inset
 
 .
- It is apparent that the GSMA seemed to assume SMS being used for carrying
- longer email-like messages, and apparently by pedants for spelling and
- grammar, somewhat amplifying the apparent effectiveness of their scheme.
+ 
+\end_layout
+
+\begin_layout Standard
+If the sample messages are a reliable guide, the GSMA seemed to assume SMS
+ being used for carrying longer email-like messages, and apparently by pedants
+ for spelling and grammar, somewhat amplifying the apparent effectiveness
+ of their scheme.
  Empirical examination of SMS and Twitter traffic suggests that those assumption
 s are flawed, and that in practice, TS03.42 would be likely to offer poorer
- compression than suggested by their contrived, if well meaning, examples.
+ compression than suggested by their unrepresentative, if well meaning,
+ examples.
+ 
+\end_layout
+
+\begin_layout Standard
+A more fundamental issue is that TS03.42 does not anticipate that users of
+ SMS and Twitter-like services already employ an ad-hoc form of compression
+ in their messages, using various forms of short hand to fit their messages
+ into the confines of the medium, e.g., shortening words such as 
+\begin_inset Quotes eld
+\end_inset
+
+before
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+b4
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+tomorrow
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+2moro
+\begin_inset Quotes erd
+\end_inset
+
+, and in doing so likely limiting the ability of TS03.42 to achieve any significa
+nt degree of compression.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:GSMA-TS03.42-Example"
+
+\end_inset
+
+GSMA TS03.42 Example SMS Messages.
+ Note that the apparently erroneous repetition of 021 appears in the file
+ downloaded from the GSMA.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
 <features tabularvalignment="middle">
@@ -1944,30 +2037,6 @@ Thank you for your enquiry.
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:GSMA-TS03.42-Example"
-
-\end_inset
-
-GSMA TS03.42 Example SMS Messages.
- Note that the apparently erroneous repetition of 021 appears in the original
- file downloaded from the GSMA.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1977,7 +2046,27 @@ GSMA TS03.42 Example SMS Messages.
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Performance-of-GSM"
+
+\end_inset
+
+Uncompressed and GSM TS03.42 and SMAZ compressed sizes of the TS03.42 example
+ messages.
+ Percentages are versus original size (lower is better).
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \noindent
@@ -2050,7 +2139,7 @@ SMAZ
 \begin_inset Text
 
 \begin_layout Plain Layout
-146
+146 (40.7%)
 \end_layout
 
 \end_inset
@@ -2059,7 +2148,7 @@ SMAZ
 \begin_inset Text
 
 \begin_layout Plain Layout
-117
+196 (55.7%)
 \end_layout
 
 \end_inset
@@ -2088,7 +2177,7 @@ SMAZ
 \begin_inset Text
 
 \begin_layout Plain Layout
-249
+249 (50.7%)
 \end_layout
 
 \end_inset
@@ -2097,7 +2186,7 @@ SMAZ
 \begin_inset Text
 
 \begin_layout Plain Layout
-218
+375 (76.3%)
 \end_layout
 
 \end_inset
@@ -2126,7 +2215,7 @@ SMAZ
 \begin_inset Text
 
 \begin_layout Plain Layout
-380
+380 (63.2%)
 \end_layout
 
 \end_inset
@@ -2135,7 +2224,333 @@ SMAZ
 \begin_inset Text
 
 \begin_layout Plain Layout
-304
+577 (96%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Further assessment of the performance of TS03.42 is not possible without
+ obtaining or creating an implementation of the relatively intricate specificati
+on, which are outside the scope of this paper.
+\end_layout
+
+\begin_layout Subsection
+SMAZ
+\end_layout
+
+\begin_layout Standard
+SMAZ (XXX cite) is the only other open-source short-message compression
+ library known to the authors.
+ SMAZ is remarkable in that its complete implementation is less than 200
+ lines of code --- which includes the code book of common character sequences
+ that performs the role of the pre-computed dictionary.
+ The README file for SMAZ claims average reduction in message length to
+ 50% --- 60% of original size, with English text compressing better.
+ 
+\end_layout
+
+\begin_layout Standard
+The performance of SMAZ on the three English text TS03.42 sample messages
+ suggests that the claim of reducing messages to an average of 50% --- 60%
+ of original size may not hold true for SMS-type traffic.
+ As the implementation of SMAZ is freely available it is possible to test
+ this claim.
+ Observed average compressed message lengths were in or near the upper end
+ of the claimed range for English text, suggesting typical compression is
+ a little worse.
+ See Table XXX for a summary of SMAZ performance on a variety of inputs.
+ For example, compresses to 60.6% of original size, while the README file
+ of SMAZ itself compresses to 64.1% of original size.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:SMAZ-compression-performance"
+
+\end_inset
+
+SMAZ compression performance for various inputs: compressed size as percentage
+ of original size (lower is better).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Corpus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Messages
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Avg.
+ Length
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SMAZ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pie Floater*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+English
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+171
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60.6%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SMAZ README file
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+English
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+44
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64.1%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+British English SMS Corpus
+\begin_inset CommandInset citation
+LatexCommand cite
+key "6036805"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SMS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+450
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64.8%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twitter Corpus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twitter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+348,994
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+81.4%
 \end_layout
 
 \end_inset
@@ -2149,35 +2564,45 @@ SMAZ
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Performance-of-GSM"
-
-\end_inset
-
-Uncompressed and GSM TS03.42 and SMAZ compressed sizes of the TS03.42 example
- messages.
-\end_layout
-
-\end_inset
-
-
-\end_layout
+\noindent
+\align center
+* The text from 
+\begin_inset Flex URL
+status collapsed
 
 \begin_layout Plain Layout
 
+http://en.wikipedia.org/wiki/Pie_floater
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+However, when applied to a corpus of Twitter traffic, SMAZ performs relatively
+ poorly, reducing a corpus of 348,994 
+\begin_inset Quotes eld
+\end_inset
+
+tweets
+\begin_inset Quotes erd
+\end_inset
+
+ to 81.4% of original size.
+ Thus, while effective in many instances, SMAZ elegantly small dictionary-based
+ approach is not sufficiently robust in the face of Twitter type traffic.
+ The difficulty
 \end_layout
 
 \begin_layout Subsection
-SMAZ
+shortBWT
 \end_layout
 
 \begin_layout Subsection
@@ -2194,6 +2619,17 @@ Results & Conclusions
 
 \begin_layout Section
 Future Work
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "sms-compression,serval,sms-corpus"
+options "plain"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
