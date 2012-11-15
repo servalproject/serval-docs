@@ -2993,9 +2993,9 @@ bakfiets
 \end_layout
 
 \begin_layout Standard
-The entropy of the remaining words was modelled using the 3rd order statistics
- previously computed to estimate the number of bits required to encode the
- word as a sequence of characters.
+The entropy of the each word remaining in the list was modelled using the
+ 3rd order statistics previously computed, resulting in an estimate of the
+ number of bits required to encode the word as a sequence of characters.
  This represents the saving possible by encoding the word as a single token
  (
 \begin_inset Formula $S_{potential}$
@@ -3011,27 +3011,30 @@ The number of instances of all remaining words was calculated, as was the
  From this it was possible to compute the probability of a word substitution
  occurring at any single word break, and from that the entropy, and hence
  the bit cost of either substituting or not substituting.
- Non-substitution remained the greater probability, and using arithmetic
- coding results in a fractional bit cost each time a word is not substituted.
- Similarly, as word substitution occurs with 
-\begin_inset Formula $p<1$
+ Substitution occurred with 
+\begin_inset Formula $p<0.5$
 \end_inset
 
-, there is a cost per substitution (
+, thus a no-substitution event could be encoded in less than one bit.
+ For the same reason, each word substitution event must incur a cost per
+ substitution (
 \begin_inset Formula $C_{sub}$
 \end_inset
 
-).
+) of 
+\begin_inset Formula $\ge1$
+\end_inset
+
+ bit.
  That cost must be deducted from the savings possible by substituting each
  word.
- The relative frequency of each word remaining in the list allows the calculatio
-n of a given word occurring for any given substitution, resulting in an
- encoding cost for the word's token (
+ The cost of encoding any given word (
 \begin_inset Formula $C_{token}$
 \end_inset
 
-).
- Thus the overall saving per word when substituted could be calculated according
+) can be computed from the relative frequency of that word in the training
+ corpus.
+ Thus the overall saving per word when substituted could be estimated according
  to 
 \begin_inset Formula $S_{actual}=S_{potential}-C_{sub}-C_{token}$
 \end_inset
@@ -3044,8 +3047,8 @@ n of a given word occurring for any given substitution, resulting in an
 \begin_inset Formula $S_{actual}$
 \end_inset
 
- was calculated for each word remaining in the list, and any words where
- 
+ was calculated for each word remaining in the list.
+ Any words where 
 \begin_inset Formula $S_{actual}\le0$
 \end_inset
 
@@ -3115,8 +3118,8 @@ In addition to the model described above, two simpler models were also included
 
 \begin_layout Standard
 First, if no rare or non-textual characters were present in the message,
- the entire message was encoded using radix-69, and with case information
- encoded as for the statistical model.
+ the entire message was encoded using radix-69.
+ Case information was still encoded as for the statistical model.
  Selection of this model versus the statistical model is via a single decision
  with 
 \begin_inset Formula $p=0.05$
@@ -3128,20 +3131,18 @@ First, if no rare or non-textual characters were present in the message,
 \begin_inset Formula $p\ll0.05$
 \end_inset
 
-, but would also result in a substantially higher cost to use the non-statistica
-l model, and was thus not pursued, so as to minimise the likelihood of poor
- compression of any message at a slight expense to the encoding of messages
- that compress well.
+, but would also result in a substantially higher bit cost to use the non-statis
+tical model, without offering any significant reduction in cost overall.
 \end_layout
 
 \begin_layout Standard
 Second, if rare or non-textual characters were present, and the MSB of the
  first character was zero, the message was encoded as the identical of the
- input string, and thus avoiding negative compression.
+ input string.
  This reuse of the MSB of the first character is appropriate for the intended
- use case of sending text messages via Iridium SMS, which allows 8-bit character
-s.
- For traditional SMS carriage, an additional byte would be necessary.
+ use case of sending text messages via Iridium SMS, which transmits 8-bit
+ characters.
+ For traditional SMS carriage, one additional byte would be necessary.
 \end_layout
 
 \begin_layout Standard
