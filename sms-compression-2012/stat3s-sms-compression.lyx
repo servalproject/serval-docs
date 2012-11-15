@@ -139,7 +139,7 @@ key "214771,DBLP:journals/ibmrd/RissanenL79,fastarithmeticcoding05sanko,howard92
 \end_layout
 
 \begin_layout Standard
-Of course, for consumers, the situation is different, because they consumers
+Of course, for consumers, the situation is different, because consumers
  pay carriers per message unit.
  The impressive cost charged per message unit by mobile telecommunications
  carriers, introduces the potential for SMS compression to be revenue-positive.
@@ -2926,7 +2926,7 @@ Character Statistics Generation & Encoding of Mono-Case Textual Characters
 \end_layout
 
 \begin_layout Standard
-A corpus of Twitter messages as obtained as previously described in this
+A corpus of Twitter messages was obtained as previously described in this
  paper.
  A program was written to analyse those messages at the character level
  to determine the probability of the first letter of a message being either
@@ -3730,7 +3730,8 @@ English like
  language, such as the GSM sample message 1 and the Pie Floater text, performanc
 e is even better, around 40% of uncompressed message size.
  Thus we suggest that through stats3, the state of the art in short message
- compression, particularly for the compression of SMS and Twitter messages.
+ compression has been advanced, particularly for the compression of SMS
+ and Twitter messages.
 \end_layout
 
 \begin_layout Section
