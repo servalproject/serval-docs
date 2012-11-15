@@ -273,8 +273,28 @@ Second, many compression schemes, whether adaptive or not, use a dictionary
 
 \begin_layout Standard
 As a result, most compression algorithms that perform well on bulk data,
- e.g., gzip, bzip2 and PAQ (XXX cite these), all perform poorly on short messages,
- as illustrated in Table 
+ e.g., gzip
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gailly93gzip"
+
+\end_inset
+
+, bzip2
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bzip2,burrows94blocksorting"
+
+\end_inset
+
+ and PAQ
+\begin_inset CommandInset citation
+LatexCommand cite
+key "paq6"
+
+\end_inset
+
+, all perform poorly on short messages, as illustrated in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Performance-of-Several"
@@ -1668,8 +1688,10 @@ Existing Short Message Compression Schemes
 The logical solution to the challenge of compressing short strings such
  as SMS messages, is to pre-compute a dictionary that then does not need
  to be embedded in each compressed message.
- This is indeed the approach taken by extant SMS compression schemes, of
- which the following are perhaps the most prominent.
+ This is indeed the approach taken by many extant SMS compression schemes,
+ of which the following are perhaps the most prominent.
+ The non-dictionary shortBWT scheme, and several commercial SMS compression
+ systems are added for completeness.
 \end_layout
 
 \begin_layout Subsection
@@ -1678,7 +1700,14 @@ GSM TS03.42
 
 \begin_layout Standard
 Between 1997 and 1999 the GSM Association (GSMA) developed Technical Standard
- 03.42 (XXX cite), a standard for compression of SMS messages.
+ (TS) 03.42
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ts03.42,ts23.42"
+
+\end_inset
+
+, a standard for compression of SMS messages.
  At the time Arithmetic Coding was possibly patent encumbered, and perhaps
  for that reason and the relatively higher computation demands of that scheme,
  TS03.42 uses Huffman Coding
@@ -1766,6 +1795,7 @@ tomorrow
 
 , and in doing so likely limiting the ability of TS03.42 to achieve any significa
 nt degree of compression.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2089,7 +2119,7 @@ Thank you for your enquiry.
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2289,6 +2319,20 @@ SMAZ
 Further assessment of the performance of TS03.42 is not possible without
  obtaining or creating an implementation of the relatively intricate specificati
 on, which are outside the scope of this paper.
+ Thus assigning an estimation of the performance of TS03.42 on real SMS and
+ Twitter traffic is difficult, with performance not likely to be better
+ than reducing message sizes to 50% of original size on average.
+ Relative performance can be inferred by comparing the relative performance
+ on the tree sample SMS messages.
+ For example, Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Performance-of-GSM"
+
+\end_inset
+
+ gives us reason to believe that TS03.42 outperforms SMAZ by a considerable
+ margin.
 \end_layout
 
 \begin_layout Subsection
@@ -2425,7 +2469,7 @@ Overall for SMAZ, observed average compressed message lengths were all worse
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2787,12 +2831,345 @@ http://en.wikipedia.org/wiki/Pie_floater
 shortBWT
 \end_layout
 
+\begin_layout Standard
+The shortBWT
+\begin_inset CommandInset citation
+LatexCommand cite
+key "doi:10.1117/12.507758"
+
+\end_inset
+
+ scheme is included as a counter-point, based on the remarkable properties
+ of the Burrows-Wheeler transform
+\begin_inset CommandInset citation
+LatexCommand cite
+key "burrows94blocksorting"
+
+\end_inset
+
+, and can be generally understood as the equivalent of bzip2
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bzip2"
+
+\end_inset
+
+ for short strings.
+ In contrast with SMAZ and TS03.42, shortBWT does not use a precomputed dictionar
+y of words or word parts, but rather uses precomputed statistics for the
+ relative diversity and abundance of characters in a message.
+\end_layout
+
+\begin_layout Standard
+As shortBWT does not appear to be publicly avaiable, its performance can
+ only be estimated by examining Figure 3 of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "doi:10.1117/12.507758"
+
+\end_inset
+
+.
+ That figure suggests shortBWT is capable of compressing strings of 200
+ characters to an average of around 55% of their original size.
+ Performance on shorter strings is impossible to discern, as the various
+ lines of the graph converge, but there is no reason to believe that performance
+ would be any better on shorter strings, as shorter strings make it more
+ difficult for the Burrows-Wheeler transform to find the redundancy necessary
+ to effect compression.
+\end_layout
+
 \begin_layout Subsection
 Commercial Offerings
 \end_layout
 
+\begin_layout Standard
+There are several commercial SMS compression schemes available, e.g., 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clevertexting.com,paninikeypad.com,smszipper.com"
+
+\end_inset
+
+.
+ As closed-source proprietary offerings, there is limited information as
+ to their operation.
+ However, for the purposes of this paper our focus is on compression performance.
+ The two commercial offerings which make claims about the compression performanc
+e of their products make claims of reductions in message sizes of between
+ 60% --- 70%
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clevertexting.com"
+
+\end_inset
+
+ and 45% ---- 50%
+\begin_inset CommandInset citation
+LatexCommand cite
+key "smszipper.com"
+
+\end_inset
+
+.
+ Assuming that their claims are not exagerated, this implies similar performance
+ to shortBWT.
+ However, as with SMAZ, it is likely that either limited testing or other
+ processes have resulted in a claim that is not sustained when faced with
+ realistic SMS or Twitter traffic.
+\end_layout
+
+\begin_layout Subsection
+Summary
+\end_layout
+
+\begin_layout Standard
+The state of the art of short message compression can be summarised as the
+ various solutions offering compressed message sizes which are, on average,
+ at least 45% of the uncompressed message size, although, as previously
+ explained, there is reason to doubt that performance is in fact that good.
+ SMAZ is the only openly available scheme, and it performs much more poorly
+ than the best claims among the closed systems.
+ Thus there is, in the very least, the opportunity to match, or beat, the
+ best closed systems through the creation of a new open-source short message
+ compression scheme.
+ The following section describes the process by which we achieved this goal,
+ culminating in the implementation of the stats3 short-message compression
+ scheme.
+\end_layout
+
 \begin_layout Section
 Introduction to stats3 Short Message Compression Scheme
+\end_layout
+
+\begin_layout Standard
+It was decided that the most promising approach was to model the statistics
+ of a corpus of representative Twitter messages and use that as a basis
+ for a non-adaptive compression scheme, using arithmetic coding for the
+ back end.
+\end_layout
+
+\begin_layout Subsection
+Character Statistics Generation & Encoding of Mono-Case Textual Characters
+\end_layout
+
+\begin_layout Standard
+A corpus of Twitter messages as obtained as previously described in this
+ paper.
+ A program was written to analyse those messages at the character level
+ to determine the probability of the first letter of a message being either
+ upper or lower case, and to compute the 1st, 2nd and 3rd order statistics
+ for:
+\end_layout
+
+\begin_layout Enumerate
+the probability of the 69 most commonly occurring characters, treating all
+ letters as lower case;
+\end_layout
+
+\begin_layout Enumerate
+the probability of the first letter in a word being upper or lower case,
+ based on the case of the previous word(s) as appropriate;
+\end_layout
+
+\begin_layout Enumerate
+the probability of each letter in a word being upper or lower case, based
+ on the case of the previous letters in the word.
+\end_layout
+
+\begin_layout Enumerate
+the probability of messages being of any particular length between 0 and
+ 1,024 characters, the maximum length of short message supported by stats3.
+\end_layout
+
+\begin_layout Standard
+Messages were stripped of all letter-case information and non-textual characters
+ and then encoded according to the 3rd order statistics.
+ The length of the uncompressed message was encoded according to the message
+ length statistics.
+ The case of letters was compressed by, for each letter in a message, using
+ the 3rd-order case statistics gathered to predict the case of that letter.
+\end_layout
+
+\begin_layout Subsection
+Dictionary Generation
+\end_layout
+
+\begin_layout Standard
+In addition, word-level analysis was performed, using all characters other
+ than a-z and 0-9 to indicate a word break.
+ All words occurring less than five times were discarded.
+ Whenever a word was discarded, it was attempted to assign the frequency
+ to another word sharing the longest common prefix with the discarded word.
+ For example, discarding four instances of 
+\begin_inset Quotes eld
+\end_inset
+
+bakfietsen
+\begin_inset Quotes erd
+\end_inset
+
+ would result in the recorded frequency of 
+\begin_inset Quotes eld
+\end_inset
+
+bakfiets
+\begin_inset Quotes erd
+\end_inset
+
+ to increase by four.
+\end_layout
+
+\begin_layout Standard
+The entropy of the remaining words was modelled using the 3rd order statistics
+ previously computed to estimate the number of bits required to encode the
+ word as a sequence of characters.
+ This represents the saving possible by encoding the word as a single token
+ (
+\begin_inset Formula $S_{potential}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+The number of instances of all remaining words was calculated, as was the
+ total number of word breaks in the corpus.
+ From this it was possible to compute the probability of a word substitution
+ occurring at any single word break, and from that the entropy, and hence
+ the bit cost of either substituting or not substituting.
+ Non-substitution remained the greater probability, and using arithmetic
+ coding results in a fractional bit cost each time a word is not substituted.
+ Similarly, as word substitution occurs with 
+\begin_inset Formula $p<1$
+\end_inset
+
+, there is a cost per substitution (
+\begin_inset Formula $C_{sub}$
+\end_inset
+
+).
+ That cost must be deducted from the savings possible by substituting each
+ word.
+ The relative frequency of each word remaining in the list allows the calculatio
+n of a given word occurring for any given substitution, resulting in an
+ encoding cost for the word's token (
+\begin_inset Formula $C_{token}$
+\end_inset
+
+).
+ Thus the overall saving per word when substituted could be calculated according
+ to 
+\begin_inset Formula $S_{actual}=S_{potential}-C_{sub}-C_{token}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{actual}$
+\end_inset
+
+ was calculated for each word remaining in the list, and any words where
+ 
+\begin_inset Formula $S_{actual}\le0$
+\end_inset
+
+ were discarded from the list, and 
+\begin_inset Formula $C_{sub}$
+\end_inset
+
+ was then recalculated.
+ This process was repeated until no further words were removed from the
+ list.
+ A side effect of this process is that the word list contains no low-entropy
+ words, as they are more efficiently encoded directly using the 3rd order
+ statistics.
+ For example, 
+\begin_inset Quotes eld
+\end_inset
+
+the
+\begin_inset Quotes erd
+\end_inset
+
+ is not in the list despite its high frequency, while words such as 
+\begin_inset Quotes eld
+\end_inset
+
+tomorrow
+\begin_inset Quotes erd
+\end_inset
+
+ (and numerous misspellings thereof) are in the list, because of the higher
+ entropy of that word.
+ From a corpus of 203,661 of Twitter messages a list of 13,179 substitutable
+ words was produced.
+\end_layout
+
+\begin_layout Subsection
+Rare & Non-Text Characters
+\end_layout
+
+\begin_layout Standard
+Characters that were not in the 69 common that are covered by the predictive
+ model were exceptionally rare.
+ While a more refined method is possible, the current implementation encodes
+ those characters in a two part process.
+ First, an interpolative coder
+\begin_inset CommandInset citation
+LatexCommand cite
+key "593998"
+
+\end_inset
+
+ using an arithmetic coding back-end was used to efficiently encode the
+ positions of the characters in the message.
+ The actual characters were then recorded using arithmetic coding.
+\end_layout
+
+\begin_layout Subsection
+Model Selection
+\end_layout
+
+\begin_layout Standard
+In addition to the model described above, two simpler models were also included
+ for instances where the pre-computed statistics resulted in the compressed
+ message being longer than the uncompressed message.
+ 
+\end_layout
+
+\begin_layout Standard
+First, if no rare or non-textual characters were present in the message,
+ the entire message was encoded using radix-69, and with case information
+ encoded as for the statistical model.
+ Selection of this model versus the statistical model is via a single decision
+ with 
+\begin_inset Formula $p=0.05$
+\end_inset
+
+, resulting in a cost of 0.074 bits to use the statistical model and a cost
+ of 4.322 bits to use this non-statistical model.
+ A more accurate assessment would place 
+\begin_inset Formula $p\ll0.05$
+\end_inset
+
+, but would also result in a substantially higher cost to use the non-statistica
+l model, and was thus not pursued, so as to minimise the likelihood of poor
+ compression of any message at a slight expense to the encoding of messages
+ that compress well.
+\end_layout
+
+\begin_layout Standard
+Second, if rare or non-textual characters were present, and the MSB of the
+ first character was zero, the message was encoded as the identical of the
+ input string, and thus avoiding negative compression.
+ This reuse of the MSB of the first character is appropriate for the intended
+ use case of sending text messages via Iridium SMS, which allows 8-bit character
+s.
+ For traditional SMS carriage, an additional byte would be necessary.
 \end_layout
 
 \begin_layout Section
