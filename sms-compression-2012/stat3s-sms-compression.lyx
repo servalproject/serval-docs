@@ -156,10 +156,28 @@ Of course, for consumers, the situation is different, because they consumers
 
 \begin_layout Standard
 Indeed, the cost savings are sufficient that a number of companies have
- based their business model around compressed-SMS services (XXX cite SMSzipper.co
-m, paninikeypad.com and clevertexting.com), and claim reductions in message
- sizes of between 30% --- 40% (XXX cite clevertexting.com) and 50% ---- 55%
- (XXX cite smszipper.com).
+ based their business model around compressed-SMS services
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clevertexting.com,paninikeypad.com,smszipper.com"
+
+\end_inset
+
+, and claim reductions in message sizes of between 30% --- 40%
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clevertexting.com"
+
+\end_inset
+
+ and 50% ---- 55%
+\begin_inset CommandInset citation
+LatexCommand cite
+key "smszipper.com"
+
+\end_inset
+
+.
  However, as commercial solutions, these claims cannot be easily verified
  nor is the source code available to allow meaningful benchmarking against
  other options.
@@ -2278,8 +2296,15 @@ SMAZ
 \end_layout
 
 \begin_layout Standard
-SMAZ (XXX cite) is the only other open-source short-message compression
- library known to the authors.
+SMAZ
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SMAZ"
+
+\end_inset
+
+ is the only other open-source short-message compression library known to
+ the authors.
  SMAZ is remarkable in that its complete implementation is less than 200
  lines of code --- which includes the code book of common character sequences
  that performs the role of the pre-computed dictionary.
