@@ -60,7 +60,7 @@
 \begin_body
 
 \begin_layout Title
-Improved Compression of Short Messages
+Improving Compression of Short Messages
 \end_layout
 
 \begin_layout Author
@@ -72,29 +72,21 @@ Romana Challans, Jennifer Hampton,
 \begin_inset Newline newline
 \end_inset
 
-Jeremy Lakeman, Matthew Lloyd*
+Jeremy Lakeman and Corey Wallis
 \begin_inset Newline newline
 \end_inset
 
- and Corey Wallis
-\begin_inset Newline newline
-\end_inset
-
-Flinders University and New Zealand Red Cross(*).
+Flinders University
 \begin_inset Newline newline
 \end_inset
 
 
 \family typewriter
-{paul,andrew,romana,jenny,jeremy}@servalproject.org,
+{paul,andrew,romana}@servalproject.org,
 \begin_inset Newline newline
 \end_inset
 
-matthew.lloyd@redcross.org.nz,
-\begin_inset Newline newline
-\end_inset
-
-corey@servalproject.org,
+{corey,jenny,jeremy}@servalproject.org
 \end_layout
 
 \begin_layout Section
@@ -1802,7 +1794,7 @@ nt degree of compression.
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1828,30 +1820,10 @@ GSMA TS03.42 Example SMS Messages.
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
+<lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="left" valignment="top" width="11cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-#
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Text
-\end_layout
-
-\end_inset
-</cell>
-</row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2119,7 +2091,7 @@ Thank you for your enquiry.
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2880,7 +2852,7 @@ key "doi:10.1117/12.507758"
 \end_layout
 
 \begin_layout Subsection
-Commercial Offerings
+Commercial Short Message Compression Systems
 \end_layout
 
 \begin_layout Standard
@@ -2939,7 +2911,7 @@ The state of the art of short message compression can be summarised as the
 \end_layout
 
 \begin_layout Section
-Introduction to stats3 Short Message Compression Scheme
+Overview of the stats3 Short Message Compression Scheme
 \end_layout
 
 \begin_layout Standard
