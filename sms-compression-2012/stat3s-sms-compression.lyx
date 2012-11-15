@@ -115,17 +115,30 @@ Loss-less compression is a mature field, with a wide variety of methodologies
 \begin_layout Standard
 Thus, even for cellular Short Message Service (SMS) traffic, where message
  volumes are enormous, relatively little effort has been invested.
- The GSMA did create a standard for SMS compression, TS03.42 (XXX cite),
- but it is difficult to ascertain whether it has been widely adopted by
- carriers, and the standard itself has not been updated since 1999, even
- though attractive compression technologies such as Arithmetic Coding
+ The GSMA did create a standard for SMS compression, GSM 03.42 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ts03.42"
+
+\end_inset
+
+, but it is difficult to ascertain whether it has been widely adopted by
+ carriers, and the standard itself has not been updated since 1999 apart
+ from being carried forward into the corresponding LTE standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ts23.42"
+
+\end_inset
+
+, even though attractive compression technologies such as Arithmetic Coding
 \begin_inset CommandInset citation
 LatexCommand cite
 key "214771,DBLP:journals/ibmrd/RissanenL79,fastarithmeticcoding05sanko,howard92analysis,howard94arithmetic,langdon84arithmetic"
 
 \end_inset
 
- have lapsed from patent encumberance since that time.
+ have lapsed from patent encumberance in the meantime.
  Perhaps for mobile telecommunications carriers the disinterest is simply
  commercial; they charge per message unit of 160 7-bit characters, i.e., 140
  8-bit bytes, and reducing the number of messages required for parties to
@@ -2281,10 +2294,11 @@ The performance of SMAZ on the three English text TS03.42 sample messages
  of original size may not hold true for SMS-type traffic.
  As the implementation of SMAZ is freely available it is possible to test
  this claim.
- Observed average compressed message lengths were in or near the upper end
- of the claimed range for English text, suggesting typical compression is
- a little worse.
- See Table 
+ 
+\end_layout
+
+\begin_layout Standard
+See Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:SMAZ-compression-performance"
@@ -2292,15 +2306,101 @@ reference "tab:SMAZ-compression-performance"
 \end_inset
 
  for a summary of SMAZ performance on a variety of inputs.
- For example, compresses to 60.6% of original size, while the README file
- of SMAZ itself compresses to 64.1% of original size.
+ Attempt was made to include the National University of Singapore (NUS)
+ SMS corpus, the largest public SMS corpus known to the authors.
+ The NUS corpus custodians did not respond in time for inclusion of the
+ NUS corpus in this comparison.
+ SMS SPAM Collection v.1
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sms-collection-v.1"
+
+\end_inset
+
+ consists of (at the time) approximately 37% of the NUS corpus.
+ All NUS SMS corpus derived corpora will be necessarily biased because the
+ majority of messages were obtained from students at the NUS.
+ 
+\end_layout
+
+\begin_layout Standard
+The Private Twitter Corpus is a collection of Twitter messages collected
+ in several episodes during October and November 2012.
+ Collection occurred using the Twitter statuses/sample API that returns
+ a random sampling of public Twitter status messages
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://dev.twitter.com/docs/streaming-apis/streams/public
+\end_layout
+
+\end_inset
+
+; on-line; accessed 15 November 2012.
+\end_layout
+
+\end_inset
+
+, and filtered to exclude all messages containing unicode characters, as
+ efficient handling of unicode messages is beyond the scope of the work
+ described in this paper.
+ Nonetheless, the corpus contains messages in many languages and of a wide
+ variety of forms.
+ Twitter's terms of use appear to prevent the release of any public corpus
+ of Twitter messages, and even the TREC community are only able to distribute
+ a list of tweets, rather than the tweets themselves
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://trec.nist.gov/data/tweets/
+\end_layout
+
+\end_inset
+
+; on-line; acccessed 15 November 2012.
+\end_layout
+
+\end_inset
+
+.
+ Benchmarking against the 93 million message TREC Twitter Corpus
+\begin_inset CommandInset citation
+LatexCommand cite
+key "McCreadie:2012:BRT:2348283.2348495"
+
+\end_inset
+
+ is beyond the scope of this paper, as such a large corpus is not necessary
+ to obtain meaningful statistics about composition and compressibility of
+ Twitter messages.
+\end_layout
+
+\begin_layout Standard
+Overall for SMAZ, observed average compressed message lengths were all worse
+ than the claimed range for English text, and in the case of Twitter messages
+ much worse, with average compressed message lengths of 81.4% of the uncompressed
+ message length.
+ Thus, while effective in many instances, SMAZ elegantly small dictionary-based
+ approach is not sufficiently robust in the face of Twitter type traffic.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2325,7 +2425,7 @@ SMAZ compression performance for various inputs: compressed size as percentage
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="5">
+<lyxtabular version="3" rows="6" columns="5">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -2529,11 +2629,65 @@ SMS
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SMS SPAM Collection v.1
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sms-collection-v.1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SMS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5,547
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+82
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71.6%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Twitter Corpus
+Private Twitter Corpus
 \end_layout
 
 \end_inset
@@ -2602,22 +2756,6 @@ http://en.wikipedia.org/wiki/Pie_floater
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-However, when applied to a corpus of Twitter traffic, SMAZ performs relatively
- poorly, reducing a corpus of 348,994 
-\begin_inset Quotes eld
-\end_inset
-
-tweets
-\begin_inset Quotes erd
-\end_inset
-
- to 81.4% of original size.
- Thus, while effective in many instances, SMAZ elegantly small dictionary-based
- approach is not sufficiently robust in the face of Twitter type traffic.
- The difficulty
 \end_layout
 
 \begin_layout Subsection
