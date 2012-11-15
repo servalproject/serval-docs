@@ -3766,6 +3766,31 @@ Future Work
 \end_layout
 
 \begin_layout Standard
+There are several areas that offer potential for improving the performance
+ of the stats3 scheme.
+ First, encoding of rare and non-textual characters, including unicode character
+s has been left all but unexplored.
+ Second, higher order statistical modelling of the case of letters in words
+ is likely to result in some improvements there.
+ However, the area where the most yield is expected is on improving the
+ mono-case textual character encoder, which typically accounts for 90% of
+ the length of a compressed message.
+ Using fixed-order statistics is suboptimal here, because it introduces
+ relatively high data storage requirements (approximately 1.5MB for 3rd order
+ statistics for a 69-character alphabet), especially for mobile devices,
+ even though most of those statistics will be zero.
+ A better approach is to replace the fixed-order model with a variable-order
+ model that models more deeply where it is warranted, and less deeply otherwise.
+ This has the potential to do away with the need for a separate word list
+ altogether, which both simplifies and potentially improves the compression
+ and speed performance of the system.
+ Finally, the variable-order statistical model should be loadable from a
+ binary file format, rather than be an irreplacable part of the program,
+ so that the model can be updated as desired in applications where that
+ would be useful.
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "sms-compression,serval,sms-corpus,wiki,dash"
