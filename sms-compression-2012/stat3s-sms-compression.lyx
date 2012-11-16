@@ -3181,6 +3181,14 @@ name "sec:Table--presents"
  the private Twitter corpus.
  The remaining 145,333 messages were used for the actual test, for both
  stats3 and SMAZ to provide comparability.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Speed-comparison-of"
+
+\end_inset
+
+ compares the speed of stats3 and SMAZ on the private Twitter corpus.
 \end_layout
 
 \begin_layout Standard
@@ -3199,7 +3207,8 @@ name "tab:Comparative-performance-of"
 
 \end_inset
 
-Comparative performance of stats3 (lower numbers are better).
+Compressed message sizes as a percentage of uncompressed size (lower numbers
+ are better).
 \end_layout
 
 \end_inset
@@ -3705,11 +3714,223 @@ Private Twitter Corpus
 \end_layout
 
 \begin_layout Standard
-It is clear that stats3 easily outperforms both TS03.42 and SMAZ on all inputs.
- The difference in performance between SMAZ and stats3 for the more SMS
- and Twitter-like messages is particularly striking, providing evidence
- for what is already intuitively apparent; that SMS and Twitter messages
- differ substantially in composition from normal language.
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Speed-comparison-of"
+
+\end_inset
+
+Speed comparison of SMAZ and stats3 (Mac Book Pro, OSX 10.7.3 , 2.7GHz Intel
+ Core i7, 16GB 1333MHz DDR3).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+stats3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SMAZ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compression (messages/second)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+31,389
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+324,988
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compression (MB/second)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.65
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17.08
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Decompression (messages/second)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+29,212
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,705,926
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Decompression (MB/second)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.54
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+89.68
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is clear that stats3 is much slower than SMAZ, but that in return, stats3
+ easily outperforms both TS03.42 and SMAZ on all inputs.
+ Nonetheless, stats3 is still able to process tens of thousands of messages
+ per second on a single modern CPU, and is more than fast enough to run
+ on a mobile telephone handset or similar embedded device connected to a
+ satellite SMS module.
+ The memory use of stats3 is less than 2MB, including the statistical model
+ and dictionary.
+ While larger than the approximately 10KB required for SMAZ, it remains
+ small enough to be comfortably included in a smart-phone or smart-phone
+ application.
+\end_layout
+
+\begin_layout Standard
+The difference in compression performance between SMAZ and stats3 for the
+ more SMS and Twitter-like messages is particularly striking, providing
+ evidence for what is already intuitively apparent; that SMS and Twitter
+ messages differ substantially in composition from normal language.
  This also suggests that TS03.42 requires substantial revising if it is to
  remain relevant in the light of realistic message composition.
 \end_layout
