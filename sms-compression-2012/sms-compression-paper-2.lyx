@@ -1,0 +1,176 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+SMS Compression Paper #2
+\end_layout
+
+\begin_layout Section
+Things Done / Discovered
+\end_layout
+
+\begin_layout Standard
+- very compact compressed representation of statistics for use on memory-constra
+ined devices.
+\end_layout
+
+\begin_layout Standard
+- can use compressed statistics while still compressed to enable compression/dec
+ompression using only a few KB of RAM for small devices that need to operate
+ on only a few messages at a time (eg mobile phone clients).
+\end_layout
+
+\begin_layout Standard
+- can also extract all statistics for ~100x - 1000x faster operation, in
+ return for using a few 10s of MB of RAM for devices that need to operate
+ on many messages (eg message centres/exchanges).
+\end_layout
+
+\begin_layout Standard
+- variable order statistics
+\end_layout
+
+\begin_layout Standard
+- variable frequency thresholds
+\end_layout
+
+\begin_layout Standard
+- both of the above affect compression performance.
+ Minima for compressed size moves towards larger frequency thresholds as
+ order increases.
+\end_layout
+
+\begin_layout Standard
+- for fixed file budget higher order and higher frequency threshold is the
+ best choice.
+ This is not surprising, as more deeper modelling should result in better
+ performance.
+\end_layout
+
+\begin_layout Standard
+- deeper modelling reduces dependence on word lists.
+\end_layout
+
+\begin_layout Section
+Things to cover
+\end_layout
+
+\begin_layout Standard
+- compression apparently improves with increasing message length.
+ Is this just because we encode message length statistically, and shorter
+ messages are rarer, so end up costing more bits to encode their length?
+ (of course this doesn't apply to the 13% of messages that are 9-digit numbers).
+\end_layout
+
+\begin_layout Standard
+- explain the 66% peak (9-digit numbers: 4.9 bytes for digits + ~3bits for
+ length > 5 bytes, hence costing 6 bytes)
+\end_layout
+
+\begin_layout Standard
+- explain ~75% peak (radix-69 encoding)
+\end_layout
+
+\begin_layout Standard
+- explain 100% peak (things that don't compress)
+\end_layout
+
+\begin_layout Section
+Future work
+\end_layout
+
+\begin_layout Standard
+- Unicode
+\end_layout
+
+\begin_layout Standard
+- Further examine what to do when counts in a given node are too low to
+ be trustworthy.
+ Could use some kind of mixing model to mix order-1 or order-(n-1) frequencies
+ with any frequencies in the node that are high enough to suggest that they
+ are more plentiful than in the order-(n-1) node.
+\end_layout
+
+\begin_layout Standard
+- prune order-n nodes where their statistics are indistinguishable from
+ parent node.
+ This will save space without compromising compression performance.
+ Relaxing 
+\begin_inset Quotes eld
+\end_inset
+
+indistinguishable
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+very similar to
+\begin_inset Quotes erd
+\end_inset
+
+ could save further space, but at some possible cost to compression.
+\end_layout
+
+\end_body
+\end_document
