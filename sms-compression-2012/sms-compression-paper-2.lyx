@@ -117,12 +117,18 @@ Things to cover
 - compression apparently improves with increasing message length.
  Is this just because we encode message length statistically, and shorter
  messages are rarer, so end up costing more bits to encode their length?
- (of course this doesn't apply to the 13% of messages that are 9-digit numbers).
 \end_layout
 
 \begin_layout Standard
 - explain the 66% peak (9-digit numbers: 4.9 bytes for digits + ~3bits for
- length > 5 bytes, hence costing 6 bytes)
+ length > 5 bytes, hence costing 6 bytes) (the 9-digit numbers are an artifact
+ of my original dodgy tweet-decoder, the new twitter_corpus5.txt and friends
+ deals with this)
+\end_layout
+
+\begin_layout Standard
+- explain why Order 4 performs better than Order 6 (see discussion below
+ on compressing numbers for one explanation and possible correction).
 \end_layout
 
 \begin_layout Standard
@@ -133,12 +139,39 @@ Things to cover
 - explain 100% peak (things that don't compress)
 \end_layout
 
+\begin_layout Standard
+- remove all dependence on message_stats.c (except for word lists as an outgoing
+ comparison)
+\end_layout
+
+\begin_layout Standard
+- number compression: represent 0-9 with a single token, followed by explicitly
+ coding the digit using [0..9] via range coding.
+ Should deal with order4 outperforming order6.
+\end_layout
+
+\begin_layout Standard
+- unicode compression: represent all unicode characters with a single token,
+ followed by explicitly coding the codepoint via range coding.
+ Generate stats for each unicode character page (the 512 blocks of 0x80
+ chars each).
+ Stats should be frequency of each code in the page, plus the the frequency
+ of switching to each of the other 511 pages.
+ That should capture the probability of page changes fairly well, excepting
+ when we have single character excursions to another code page.
+ Use 512th page slot to indicate switching back to the previous code page,
+ thus dealing with excursions.
+ Table size will be 512 pages x (0x80 + 512 = 768) = 384K entries x sizeof(unsig
+ned int) = 1.5MB.
+ Quite manageable.
+\end_layout
+
 \begin_layout Section
 Future work
 \end_layout
 
 \begin_layout Standard
-- Unicode
+- higher-order Unicode statistics.
 \end_layout
 
 \begin_layout Standard
