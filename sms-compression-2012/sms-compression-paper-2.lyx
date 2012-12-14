@@ -109,6 +109,21 @@ ompression using only a few KB of RAM for small devices that need to operate
 - deeper modelling reduces dependence on word lists.
 \end_layout
 
+\begin_layout Standard
+- go too deep (> order 4) and compression starts to decrease (but why?)
+\end_layout
+
+\begin_layout Standard
+- flattened digits to a single symbol followed by equiprobable(10) to reduce
+ node proliferation
+\end_layout
+
+\begin_layout Standard
+- reduce memory use during stats gathering by having small nodes with 4
+ entries each, and only allocating all ~70 nodes when those are full.
+ Reduces memory use by approximately 75%.
+\end_layout
+
 \begin_layout Section
 Things to cover
 \end_layout
@@ -127,8 +142,8 @@ Things to cover
 \end_layout
 
 \begin_layout Standard
-- explain why Order 4 performs better than Order 6 (see discussion below
- on compressing numbers for one explanation and possible correction).
+- explain why Order 4 performs better than Order 5, 6 or 7 (see discussion
+ below on compressing numbers for one explanation and possible correction).
 \end_layout
 
 \begin_layout Standard
