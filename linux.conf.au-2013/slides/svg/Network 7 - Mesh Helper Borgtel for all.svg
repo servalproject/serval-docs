@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="12cm" height="10cm" viewBox="-1 -1 233 185" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2.77556e-16; stroke: #ffffff" x="0" y="0" width="232" height="184.875"/>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="208" y="36" width="10" height="17"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="208" y="36" width="10" height="17"/>
+    </g>
+    <g>
+      <rect style="fill: #e6e6fa" x="209" y="37" width="8" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="209" y="37" width="8" height="12"/>
+    </g>
+    <g>
+      <ellipse style="fill: #ffffff" cx="213" cy="51" rx="1" ry="1"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="213" cy="51" rx="1" ry="1"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="213" cy="51" rx="1" ry="1"/>
+    </g>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="16" y="36" width="10" height="17"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="16" y="36" width="10" height="17"/>
+    </g>
+    <g>
+      <rect style="fill: #e6e6fa" x="17" y="37" width="8" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="17" y="37" width="8" height="12"/>
+    </g>
+    <g>
+      <ellipse style="fill: #ffffff" cx="21" cy="51" rx="1" ry="1"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="21" cy="51" rx="1" ry="1"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="21" cy="51" rx="1" ry="1"/>
+    </g>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="26.3013" y1="157.528" x2="47.748" y2="145.505"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="60.3044" y1="144.135" x2="79.6946" y2="150.703"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="47.7039" y1="138.341" x2="22.2935" y2="123.576"/>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="16">
+    <tspan x="112" y="16">Serval Mesh network</tspan>
+    <tspan x="112" y="25.8778">Mesh Helper device - Borgtel everywhere for all</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="36.425" y="148" width="35.15" height="13.6556"/>
+    <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="54" y="153.25">
+      <tspan x="54" y="153.25">Access Point</tspan>
+      <tspan x="54" y="160.306">&amp; Ad-Hoc</tspan>
+    </text>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="12" y="112" width="10" height="17"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="12" y="112" width="10" height="17"/>
+    </g>
+    <g>
+      <rect style="fill: #a7d2d2" x="13" y="113" width="8" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="13" y="113" width="8" height="12"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="13" y="126" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="13" y="126" width="2" height="2"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="16" y="126" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="16" y="126" width="2" height="2"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="19" y="126" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="19" y="126" width="2" height="2"/>
+    </g>
+  </g>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="17" y="121.325">
+    <tspan x="17" y="121.325">D</tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="80" y="144" width="10" height="17"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="80" y="144" width="10" height="17"/>
+    </g>
+    <g>
+      <rect style="fill: #a7d2d2" x="81" y="145" width="8" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="81" y="145" width="8" height="12"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="81" y="158" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="81" y="158" width="2" height="2"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="84" y="158" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="84" y="158" width="2" height="2"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="87" y="158" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="87" y="158" width="2" height="2"/>
+    </g>
+  </g>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="85" y="153.325">
+    <tspan x="85" y="153.325">F</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="85" y="166.25">
+    <tspan x="85" y="166.25">Client</tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="16" y="152" width="10" height="17"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="16" y="152" width="10" height="17"/>
+    </g>
+    <g>
+      <rect style="fill: #a7d2d2" x="17" y="153" width="8" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="17" y="153" width="8" height="12"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="17" y="166" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="17" y="166" width="2" height="2"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="20" y="166" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="20" y="166" width="2" height="2"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="23" y="166" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="23" y="166" width="2" height="2"/>
+    </g>
+  </g>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="21" y="161.325">
+    <tspan x="21" y="161.325">E</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="21" y="174.25">
+    <tspan x="21" y="174.25">Ad-Hoc</tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="48" y="136" width="12" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="48" y="136" width="12" height="12"/>
+    </g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="52" y1="136" x2="50" y2="128"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="56" y1="136" x2="58" y2="128"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="48" y1="138" x2="60" y2="138"/>
+    <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="54" y="143.65">
+      <tspan x="54" y="143.65">MH</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="26.2952" y1="73.0775" x2="55.7039" y2="54.0695"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="68.3036" y1="56.2571" x2="87.7224" y2="75.5329"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="55.7039" y1="49.1554" x2="26.2952" y2="45.2103"/>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="21" y="45.325">
+    <tspan x="21" y="45.325">A</tspan>
+  </text>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="93.826" y="81.025">
+    <tspan x="93.826" y="81.025"> B</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="21" y="34.65">
+    <tspan x="21" y="34.65">Client</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="90.913" y="90.65">
+    <tspan x="90.913" y="90.65">Client</tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="16" y="68" width="10" height="17"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="16" y="68" width="10" height="17"/>
+    </g>
+    <g>
+      <rect style="fill: #a7d2d2" x="17" y="69" width="8" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="17" y="69" width="8" height="12"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="17" y="82" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="17" y="82" width="2" height="2"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="20" y="82" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="20" y="82" width="2" height="2"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="23" y="82" width="2" height="2"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="23" y="82" width="2" height="2"/>
+    </g>
+  </g>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="21" y="77.325">
+    <tspan x="21" y="77.325">C</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="21" y="90.25">
+    <tspan x="21" y="90.25">Client</tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="56" y="44" width="12" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="56" y="44" width="12" height="12"/>
+    </g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="60" y1="44" x2="58" y2="36"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="64" y1="44" x2="66" y2="36"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="56" y1="46" x2="68" y2="46"/>
+    <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="62" y="51.65">
+      <tspan x="62" y="51.65">MH</tspan>
+    </text>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="17" y="134.25">
+    <tspan x="17" y="134.25">Ad-Hoc</tspan>
+  </text>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="61.4521" y1="56.3003" x2="54.5479" y2="135.7"/>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="180" y="60" width="12" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="180" y="60" width="12" height="12"/>
+    </g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="184" y1="60" x2="182" y2="52"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="188" y1="60" x2="190" y2="52"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="180" y1="62" x2="192" y2="62"/>
+    <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="186" y="67.65">
+      <tspan x="186" y="67.65">MH</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="192.289" y1="60.9924" x2="207.694" y2="48.7255"/>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="213" y="45.325">
+    <tspan x="213" y="45.325">G</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="213" y="58.25">
+    <tspan x="213" y="58.25">Client</tspan>
+  </text>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 6; stroke: #000000" x1="68.3044" y1="50.8135" x2="179.696" y2="65.1865"/>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="168" y="144" width="12" height="12"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="168" y="144" width="12" height="12"/>
+    </g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="172" y1="144" x2="170" y2="136"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="176" y1="144" x2="178" y2="136"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="168" y1="146" x2="180" y2="146"/>
+    <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="174" y="151.65">
+      <tspan x="174" y="151.65">MH</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 6; stroke: #000000" x1="174.896" y1="143.725" x2="185.104" y2="72.2754"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="203.763" y1="128.93" x2="180.308" y2="145.535"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="180.308" y1="151.667" x2="203.763" y2="157.867"/>
+  <g>
+    <rect style="fill: #ffffff" x="156.425" y="156" width="35.15" height="13.6556"/>
+    <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="174" y="161.25">
+      <tspan x="174" y="161.25">Access Point</tspan>
+      <tspan x="174" y="168.306">&amp; Ad-Hoc</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="168.425" y="72" width="35.15" height="13.6556"/>
+    <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="186" y="77.25">
+      <tspan x="186" y="77.25">Access Point</tspan>
+      <tspan x="186" y="84.3056">&amp; Ad-Hoc</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 2; stroke: #000000" x1="17.8799" y1="129.299" x2="20.1201" y2="151.701"/>
+  <g>
+    <rect style="fill: #ffffff" x="44.425" y="56" width="35.15" height="13.6556"/>
+    <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="62" y="61.25">
+      <tspan x="62" y="61.25">Access Point</tspan>
+      <tspan x="62" y="68.3056">&amp; Ad-Hoc</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #000077" d="M 88.1748 72 C 88.0783,72 88,72.0783 88,72.1748 L 88,85.2252 C 88,85.3217 88.0783,85.4 88.1748,85.4 L 93.6513,85.4 C 93.7478,85.4 93.8261,85.3217 93.8261,85.2252 L 93.8261,72.1748 C 93.8261,72.0783 93.7478,72 93.6513,72 L 88.1748,72z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" d="M 88.1748 72 C 88.0783,72 88,72.0783 88,72.1748 L 88,85.2252 C 88,85.3217 88.0783,85.4 88.1748,85.4 L 93.6513,85.4 C 93.7478,85.4 93.8261,85.3217 93.8261,85.2252 L 93.8261,72.1748 C 93.8261,72.0783 93.7478,72 93.6513,72 L 88.1748,72"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="89.7478" y1="72.6991" x2="89.7478" y2="73.6313"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="90.3304" y1="72.5826" x2="90.3304" y2="73.7478"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="90.913" y1="72.5826" x2="90.913" y2="73.7478"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="91.4957" y1="72.5826" x2="91.4957" y2="73.7478"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="92.0783" y1="72.6991" x2="92.0783" y2="73.6313"/>
+    <path style="fill: #90ee90" d="M 88.7574 74.3304 C 88.6609,74.3304 88.5826,74.4087 88.5826,74.5052 L 88.5826,76.4861 C 88.5826,76.5826 88.6609,76.6609 88.7574,76.6609 L 93.0687,76.6609 C 93.1652,76.6609 93.2435,76.5826 93.2435,76.4861 L 93.2435,74.5052 C 93.2435,74.4087 93.1652,74.3304 93.0687,74.3304 L 88.7574,74.3304z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" d="M 88.7574 74.3304 C 88.6609,74.3304 88.5826,74.4087 88.5826,74.5052 L 88.5826,76.4861 C 88.5826,76.5826 88.6609,76.6609 88.7574,76.6609 L 93.0687,76.6609 C 93.1652,76.6609 93.2435,76.5826 93.2435,76.4861 L 93.2435,74.5052 C 93.2435,74.4087 93.1652,74.3304 93.0687,74.3304 L 88.7574,74.3304"/>
+    <rect style="fill: #bfbfbf" x="88.5826" y="77.2435" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="88.5826" y="77.2435" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="91.4957" y="77.2435" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="91.4957" y="77.2435" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="88.5826" y="78.4087" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="88.5826" y="78.4087" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="91.4957" y="78.4087" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="91.4957" y="78.4087" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="88.5826" y="79.5739" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="88.5826" y="79.5739" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="90.3304" y="79.5739" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="90.3304" y="79.5739" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="92.0783" y="79.5739" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="92.0783" y="79.5739" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="88.5826" y="80.7391" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="88.5826" y="80.7391" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="90.3304" y="80.7391" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="90.3304" y="80.7391" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="92.0783" y="80.7391" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="92.0783" y="80.7391" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="88.5826" y="81.9043" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="88.5826" y="81.9043" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="90.3304" y="81.9043" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="90.3304" y="81.9043" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="92.0783" y="81.9043" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="92.0783" y="81.9043" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="88.5826" y="83.0696" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="88.5826" y="83.0696" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="90.3304" y="83.0696" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="90.3304" y="83.0696" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="92.0783" y="83.0696" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="92.0783" y="83.0696" width="1.16522" height="0.582609"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="89.7478" y1="84.3513" x2="89.7478" y2="84.7009"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="90.3304" y1="84.2348" x2="90.3304" y2="84.8174"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="90.913" y1="84.2348" x2="90.913" y2="84.8174"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="91.4957" y1="84.2348" x2="91.4957" y2="84.8174"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="92.0783" y1="84.3513" x2="92.0783" y2="84.7009"/>
+  </g>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="209.826" y="129.025">
+    <tspan x="209.826" y="129.025"> H</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="206.914" y="138.65">
+    <tspan x="206.914" y="138.65">Client</tspan>
+  </text>
+  <g>
+    <path style="fill: #000077" d="M 204.175 120 C 204.078,120 204,120.078 204,120.175 L 204,133.225 C 204,133.322 204.078,133.4 204.175,133.4 L 209.651,133.4 C 209.748,133.4 209.826,133.322 209.826,133.225 L 209.826,120.175 C 209.826,120.078 209.748,120 209.651,120 L 204.175,120z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" d="M 204.175 120 C 204.078,120 204,120.078 204,120.175 L 204,133.225 C 204,133.322 204.078,133.4 204.175,133.4 L 209.651,133.4 C 209.748,133.4 209.826,133.322 209.826,133.225 L 209.826,120.175 C 209.826,120.078 209.748,120 209.651,120 L 204.175,120"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="205.748" y1="120.699" x2="205.748" y2="121.631"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="206.33" y1="120.583" x2="206.33" y2="121.748"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="206.913" y1="120.583" x2="206.913" y2="121.748"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="207.496" y1="120.583" x2="207.496" y2="121.748"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="208.078" y1="120.699" x2="208.078" y2="121.631"/>
+    <path style="fill: #90ee90" d="M 204.757 122.33 C 204.661,122.33 204.583,122.409 204.583,122.505 L 204.583,124.486 C 204.583,124.583 204.661,124.661 204.757,124.661 L 209.069,124.661 C 209.165,124.661 209.243,124.583 209.243,124.486 L 209.243,122.505 C 209.243,122.409 209.165,122.33 209.069,122.33 L 204.757,122.33z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" d="M 204.757 122.33 C 204.661,122.33 204.583,122.409 204.583,122.505 L 204.583,124.486 C 204.583,124.583 204.661,124.661 204.757,124.661 L 209.069,124.661 C 209.165,124.661 209.243,124.583 209.243,124.486 L 209.243,122.505 C 209.243,122.409 209.165,122.33 209.069,122.33 L 204.757,122.33"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="125.243" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="125.243" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="207.496" y="125.243" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="207.496" y="125.243" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="126.409" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="126.409" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="207.496" y="126.409" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="207.496" y="126.409" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="127.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="127.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="206.33" y="127.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="206.33" y="127.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="208.078" y="127.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="208.078" y="127.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="128.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="128.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="206.33" y="128.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="206.33" y="128.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="208.078" y="128.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="208.078" y="128.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="129.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="129.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="206.33" y="129.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="206.33" y="129.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="208.078" y="129.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="208.078" y="129.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="131.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="131.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="206.33" y="131.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="206.33" y="131.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="208.078" y="131.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="208.078" y="131.07" width="1.16522" height="0.582609"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="205.748" y1="132.351" x2="205.748" y2="132.701"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="206.33" y1="132.235" x2="206.33" y2="132.817"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="206.913" y1="132.235" x2="206.913" y2="132.817"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="207.496" y1="132.235" x2="207.496" y2="132.817"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="208.078" y1="132.351" x2="208.078" y2="132.701"/>
+  </g>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="209.826" y="161.025">
+    <tspan x="209.826" y="161.025"> J</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="206.914" y="170.65">
+    <tspan x="206.914" y="170.65">Client</tspan>
+  </text>
+  <g>
+    <path style="fill: #000077" d="M 204.175 152 C 204.078,152 204,152.078 204,152.175 L 204,165.225 C 204,165.322 204.078,165.4 204.175,165.4 L 209.651,165.4 C 209.748,165.4 209.826,165.322 209.826,165.225 L 209.826,152.175 C 209.826,152.078 209.748,152 209.651,152 L 204.175,152z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" d="M 204.175 152 C 204.078,152 204,152.078 204,152.175 L 204,165.225 C 204,165.322 204.078,165.4 204.175,165.4 L 209.651,165.4 C 209.748,165.4 209.826,165.322 209.826,165.225 L 209.826,152.175 C 209.826,152.078 209.748,152 209.651,152 L 204.175,152"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="205.748" y1="152.699" x2="205.748" y2="153.631"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="206.33" y1="152.583" x2="206.33" y2="153.748"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="206.913" y1="152.583" x2="206.913" y2="153.748"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="207.496" y1="152.583" x2="207.496" y2="153.748"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="208.078" y1="152.699" x2="208.078" y2="153.631"/>
+    <path style="fill: #90ee90" d="M 204.757 154.33 C 204.661,154.33 204.583,154.409 204.583,154.505 L 204.583,156.486 C 204.583,156.583 204.661,156.661 204.757,156.661 L 209.069,156.661 C 209.165,156.661 209.243,156.583 209.243,156.486 L 209.243,154.505 C 209.243,154.409 209.165,154.33 209.069,154.33 L 204.757,154.33z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" d="M 204.757 154.33 C 204.661,154.33 204.583,154.409 204.583,154.505 L 204.583,156.486 C 204.583,156.583 204.661,156.661 204.757,156.661 L 209.069,156.661 C 209.165,156.661 209.243,156.583 209.243,156.486 L 209.243,154.505 C 209.243,154.409 209.165,154.33 209.069,154.33 L 204.757,154.33"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="157.243" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="157.243" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="207.496" y="157.243" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="207.496" y="157.243" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="158.409" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="158.409" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="207.496" y="158.409" width="1.74783" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="207.496" y="158.409" width="1.74783" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="159.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="159.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="206.33" y="159.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="206.33" y="159.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="208.078" y="159.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="208.078" y="159.574" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="160.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="160.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="206.33" y="160.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="206.33" y="160.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="208.078" y="160.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="208.078" y="160.739" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="161.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="161.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="206.33" y="161.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="206.33" y="161.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="208.078" y="161.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="208.078" y="161.904" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="204.583" y="163.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="204.583" y="163.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="206.33" y="163.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="206.33" y="163.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: #bfbfbf" x="208.078" y="163.07" width="1.16522" height="0.582609"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="208.078" y="163.07" width="1.16522" height="0.582609"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="205.748" y1="164.351" x2="205.748" y2="164.701"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="206.33" y1="164.235" x2="206.33" y2="164.817"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="206.913" y1="164.235" x2="206.913" y2="164.817"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="207.496" y1="164.235" x2="207.496" y2="164.817"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.06; stroke: #000000" x1="208.078" y1="164.351" x2="208.078" y2="164.701"/>
+  </g>
+</svg>

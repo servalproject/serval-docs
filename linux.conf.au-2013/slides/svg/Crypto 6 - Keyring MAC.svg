@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="12cm" height="10cm" viewBox="-1 -1 233 185" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="60" y1="76" x2="60" y2="100.7"/>
+    <polygon style="fill: #000000" points="58.5,100.7 60,103.7 61.5,100.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="58.5,100.7 60,103.7 61.5,100.7 "/>
+  </g>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2.77556e-16; stroke: #ffffff" x="0" y="0" width="232" height="184.875"/>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="12">
+    <tspan x="112" y="12">Serval Keyring MAC - steganography</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="50" y="26" width="36" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="50" y="26" width="36" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="52" y="31.95">
+    <tspan x="52" y="31.95">PKR salt</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="44" y="31.95">
+    <tspan x="44" y="31.95">32</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="64" y="88" width="36" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="64" y="88" width="36" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="66" y="93.95">
+    <tspan x="66" y="93.95">SID secret</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="44" y="93.95">
+    <tspan x="44" y="93.95">32</tspan>
+  </text>
+  <g>
+    <g>
+      <ellipse style="fill: #ffffff" cx="140" cy="68" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="140" cy="68" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="140" cy="68" rx="4" ry="4"/>
+    </g>
+    <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="140" y="69.65">
+      <tspan x="140" y="69.65">#</tspan>
+    </text>
+  </g>
+  <g>
+    <g>
+      <ellipse style="fill: #ffffff" cx="124" cy="68" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="124" cy="68" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="124" cy="68" rx="4" ry="4"/>
+    </g>
+    <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="124" y="69.65">
+      <tspan x="124" y="69.65">#</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="64" y="42" width="36" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="64" y="42" width="36" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="66" y="47.95">
+    <tspan x="66" y="47.95">PKR PIN</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="42" y="47.95">
+    <tspan x="42" y="47.95">M</tspan>
+  </text>
+  <g>
+    <g>
+      <ellipse style="fill: #ffffff" cx="156" cy="68" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="156" cy="68" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="156" cy="68" rx="4" ry="4"/>
+    </g>
+    <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="156" y="69.65">
+      <tspan x="156" y="69.65">#</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" d="M 156,50 A 4,4 0 0 0 152,46"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="100" y1="46" x2="152" y2="46"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="156" y1="50" x2="156" y2="60.7"/>
+    <polygon style="fill: #000000" points="154.5,60.7 156,63.7 157.5,60.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="154.5,60.7 156,63.7 157.5,60.7 "/>
+  </g>
+  <g>
+    <rect style="fill: #e6e6fa" x="172" y="60" width="44" height="16" rx="4" ry="4"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x="172" y="60" width="44" height="16" rx="4" ry="4"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:Courier 10 Pitch;font-style:normal;font-weight:700" x="194" y="66.0722">
+    <tspan x="194" y="66.0722">crypto_hash</tspan>
+    <tspan x="194" y="73.1278">_sha512</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="160" y1="68" x2="168.7" y2="68"/>
+    <polygon style="fill: #000000" points="168.7,69.5 171.7,68 168.7,66.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="168.7,69.5 171.7,68 168.7,66.5 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="50" y="138" width="44" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="50" y="138" width="44" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="52" y="143.95">
+    <tspan x="52" y="143.95">PKR MAC</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="46" y="143.95">
+    <tspan x="46" y="143.95">64 </tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="194,76 194,76 194,142 97.3,142 "/>
+    <polygon style="fill: #000000" points="97.3,140.5 94.3,142 97.3,143.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="97.3,140.5 94.3,142 97.3,143.5 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="50" y="104" width="36" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="50" y="104" width="36" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="52" y="109.95">
+    <tspan x="52" y="109.95">SID public</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="44" y="109.95">
+    <tspan x="44" y="109.95">32</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" d="M 136,108 A 4,4 0 0 0 140,104"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="86" y1="108" x2="136" y2="108"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="140" y1="104" x2="140" y2="75.3"/>
+    <polygon style="fill: #000000" points="141.5,75.3 140,72.3 138.5,75.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="141.5,75.3 140,72.3 138.5,75.3 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" d="M 120,92 A 4,4 0 0 0 124,88"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="100" y1="92" x2="120" y2="92"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="124" y1="88" x2="124" y2="75.3"/>
+    <polygon style="fill: #000000" points="125.5,75.3 124,72.3 122.5,75.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="125.5,75.3 124,72.3 122.5,75.3 "/>
+  </g>
+  <g>
+    <rect style="fill: #e6e6fa" x="48" y="60" width="44" height="16" rx="4" ry="4"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x="48" y="60" width="44" height="16" rx="4" ry="4"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:Courier 10 Pitch;font-style:normal;font-weight:700" x="70" y="69.6">
+    <tspan x="70" y="69.6">PKR_decrypt</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="80" y1="76" x2="80" y2="84.7"/>
+    <polygon style="fill: #000000" points="78.5,84.7 80,87.7 81.5,84.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="78.5,84.7 80,87.7 81.5,84.7 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="60" y1="34" x2="60" y2="56.7"/>
+    <polygon style="fill: #000000" points="58.5,56.7 60,59.7 61.5,56.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="58.5,56.7 60,59.7 61.5,56.7 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="80" y1="50" x2="80" y2="56.7"/>
+    <polygon style="fill: #000000" points="78.5,56.7 80,59.7 81.5,56.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="78.5,56.7 80,59.7 81.5,56.7 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" d="M 110,34 A 4,4 0 0 0 106,30"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="86" y1="30" x2="106" y2="30"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" d="M 110,65.6312 A 2.36881,2.36881 0 0 0 112.369,68"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="110" y1="34" x2="110" y2="65.6312"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x1="112.369" y1="68" x2="116.7" y2="68"/>
+    <polygon style="fill: #000000" points="116.7,69.5 119.7,68 116.7,66.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="116.7,69.5 119.7,68 116.7,66.5 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="128" y1="68" x2="132.7" y2="68"/>
+    <polygon style="fill: #000000" points="132.7,69.5 135.7,68 132.7,66.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="132.7,69.5 135.7,68 132.7,66.5 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="144" y1="68" x2="148.7" y2="68"/>
+    <polygon style="fill: #000000" points="148.7,69.5 151.7,68 148.7,66.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="148.7,69.5 151.7,68 148.7,66.5 "/>
+  </g>
+</svg>

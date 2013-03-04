@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="12cm" height="10cm" viewBox="-1 -1 233 185" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2.77556e-16; stroke: #ffffff" x="0" y="0" width="232" height="184.875"/>
+  <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="50" y="56">
+    <tspan x="50" y="56"></tspan>
+  </text>
+  <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="50" y="56">
+    <tspan x="50" y="56"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="52" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="52" width="80" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="36" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="36" width="80" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="41.95">
+    <tspan x="12" y="41.95">TX SID</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="60" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="60" width="80" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="57.95">
+    <tspan x="12" y="57.95">Interface #</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="65.95">
+    <tspan x="12" y="65.95">Sequence #</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="34" y="44" width="12" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="34" y="44" width="12" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="40" y="49.95">
+    <tspan x="40" y="49.95">SQ</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="65.95">
+    <tspan x="92" y="65.95">0..1</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="41.95">
+    <tspan x="92" y="41.95">3..33</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="49.95">
+    <tspan x="92" y="49.95">1</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="44" width="12" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="44" width="12" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="16" y="49.95">
+    <tspan x="16" y="49.95">UC</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="22" y="44" width="12" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="22" y="44" width="12" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="28" y="49.95">
+    <tspan x="28" y="49.95">IF</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="65.95">
+    <tspan x="120" y="65.95">0 if !SQ</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="57.95">
+    <tspan x="120" y="57.95">0 if !IF</tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="12">
+    <tspan x="112" y="12">MDP Overlay Frame Structure</tspan>
+  </text>
+  <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="34" y="64">
+    <tspan x="34" y="64"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="28" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="28" width="80" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="33.95">
+    <tspan x="12" y="33.95">Magic number (version)</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="33.95">
+    <tspan x="92" y="33.95">2</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="57.95">
+    <tspan x="92" y="57.95">0..1</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="70" width="80" height="22"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="70" width="80" height="22"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="94" width="80" height="14"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="94" width="80" height="14"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="136" width="80" height="32"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="136" width="80" height="32"/>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="10,180 10,170 90,170 90,180 90,180 "/>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="110" width="80" height="24"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="110" width="80" height="24"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="75.95">
+    <tspan x="12" y="75.95">MDP Packet #1</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="99.95">
+    <tspan x="12" y="99.95">MDP Packet #2</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="115.95">
+    <tspan x="12" y="115.95">MDP Packet #3</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="141.95">
+    <tspan x="12" y="141.95">MDP Packet #4</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="175.95">
+    <tspan x="12" y="175.95"> . . .</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="75.95">
+    <tspan x="92" y="75.95">4..</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="99.95">
+    <tspan x="92" y="99.95">4..</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="115.95">
+    <tspan x="92" y="115.95">4..</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="141.95">
+    <tspan x="92" y="141.95">4..</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="156" y="38.4222">
+    <tspan x="156" y="38.4222">MDP encapsulation</tspan>
+    <tspan x="156" y="45.4778">for UDP/IP</tspan>
+  </text>
+</svg>
