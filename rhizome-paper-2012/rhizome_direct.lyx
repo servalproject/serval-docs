@@ -599,8 +599,8 @@ BK=sha512(BID##RS##BID)
 \end_layout
 
 \begin_layout Standard
-where sha512() is the SHA512 hash function, ## is the concatenation operator,
- BID is the bundle ID, and RS is the Rhizome Secret.
+where sha512() is the SHA512 hash function, ## is the XOR operator, BID
+ is the bundle ID, and RS is the Rhizome Secret.
  The Rhizome Secret is a 1KB block of random data held in the Serval keyring.
  The BID##RS##BID formulation is designed such that if it proves possible
  to partially reverse the SHA512 hash function, such that the internal state
