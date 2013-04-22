@@ -130,20 +130,17 @@ key "214771,DBLP:journals/ibmrd/RissanenL79,fastarithmeticcoding05sanko,howard92
 
 \end_inset
 
- have lapsed from patent encumbrance in the meantime.
+ have lapsed from patent encumberance in the meantime.
  Perhaps for mobile telecommunications carriers the disinterest is simply
- commercial: they charge per message unit of 160 7-bit characters, i.e., 140
+ commercial; they charge per message unit of 160 7-bit characters, i.e., 140
  8-bit bytes, and reducing the number of messages required for parties to
  communicate would be revenue-negative.
- There is perhaps sufficiently commercial motivatons for mobile telecommunicatio
-n caarriers not to pursue it: they charge per message unit of 160 7-bit
- characters, i.e., 140 8-bit bytes, and reducing the number of messages requird
- for parties to communicate would be revenue negative.
+ 
 \end_layout
 
 \begin_layout Standard
-For consumers, the situation is different, because consumers pay carriers
- per message unit.
+Of course, for consumers, the situation is different, because consumers
+ pay carriers per message unit.
  The impressive cost charged per message unit by mobile telecommunications
  carriers, introduces the potential for SMS compression to be revenue-positive.
  
@@ -173,9 +170,9 @@ key "smszipper.com"
 \end_inset
 
 .
- However, as they are commercial solutions, there is no easy way to verify
- these claims, nor is the source code available to allow meaningful benchmarking
- against other options.
+ However, as commercial solutions, these claims cannot be easily verified
+ nor is the source code available to allow meaningful benchmarking against
+ other options.
  The advent of two-way satellite SMS services, such as the deLorme inReach
  that uses the Iridium constellation, have created further incentive for
  compression of messages, as Iridium charges the service providers a substantial
@@ -186,7 +183,7 @@ key "smszipper.com"
 \begin_layout Standard
 The desire to compress SMS and Twitter-like messages is heightened for systems
  such as the Serval Project where communications are encrypted and authenticated
- for security, introducing unavoidable and incompressible overhead to each
+ for security, introducing unavoidable and uncompressible overhead to each
  message in the form of digital signatures 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -205,8 +202,8 @@ key "Gardner-Stephen:2011:SMS:2185216.2185245,meshms2012,servalproject"
  is a mobile ad-hoc network that provides resilient communications for rural,
  remote and disaster situations.
  In such networks, bandwidth is often limited, and clusters of nodes may
- be isolated from one another, and satellite SMS services may therefore
- be the backhaul of last resort.
+ be isolated from one another, and satellite SMS services may be the backhaul
+ of last resort.
  
 \end_layout
 
@@ -219,22 +216,20 @@ key "meshms2012"
 
 \end_inset
 
-; thus there is the motivation for identifying effective compression schemes
- that can be effective on SMS-length messages of the kind commonly observed
- on short essaging services like Twitter, typically of 140 characters.
+; thus the motivation for identifying effective compression schemes that
+ can be effective on SMS-length messages of the kind commonly observed on
+ Twitter.
 \end_layout
 
 \begin_layout Standard
-The remainder of this paper briefly explores the technical challenges to
- compressing short messages and a survey of existing compression schemes
- appropriate for use on SMS-length messages.
- We then provide an introduction to our new stats3 SMS compression scheme,
- including a comparison with the existing state of this technology which
- demonstrates that our scheme substantially outperforms all public SMS compressi
-on systems, while it additionally matches or outperforms the unverified
- marketing claims of the commercial offerings.
- Finally, we outline several areas for future work that we believe have
- the potential to further improve the performance of stats3.
+The remainder of this paper briefly explores: technical challenges to compressin
+g short messages; a survey of existing compression schemes appropriate for
+ use on SMS-length messages; an introduction to our new stats3 SMS compression
+ scheme, including a comparison with the existing state-of-the-art, showing
+ that our scheme substantially outperforms all public SMS compression systems,
+ and matches or outperforms the unverified marketing claims of the commercial
+ offerings; finally, we outline several areas for future work that we believe
+ have the potential to further improve the performance of stats3.
 \end_layout
 
 \begin_layout Section
@@ -245,8 +240,8 @@ Challenges of Compressing of Short Messages
 The longer a message, the more likely it is to contain sufficient redundancy
  to allow a compression scheme to encode it in a manner that results in
  a reduction in size.
- This need for redundancy space, and several other reasons, are why compressing
- short messages is particularly difficult.
+ There are several reasons why compressing short messages is particularly
+ difficult.
  
 \end_layout
 
@@ -1714,10 +1709,10 @@ key "huffman52,vanleeuwen76huffmantrees,gallager78variations,DBLP:journals/tit/F
 
 \end_inset
 
-, in return for a reduction in the compression acheivable.
+, in return for a reduction in the compression possible.
  They begin with a language-specific frequency table and common word list
  to provide initial context.
- This frequency table is optionally evolved as a message is compressed providing
+ The frequency table is optionally evolved as a message is compressed providing
  some adaptability, although the word list is fixed.
 \end_layout
 
@@ -1744,9 +1739,9 @@ reference "tab:Performance-of-GSM"
 
 \begin_layout Standard
 If the sample messages are a reliable guide, the GSMA seemed to assume SMS
- being used for carrying longer email-like messages, and apparently only
- used by pedants for spelling and grammar, somewhat amplifying the apparent
- effectiveness of their scheme.
+ being used for carrying longer email-like messages, and apparently by pedants
+ for spelling and grammar, somewhat amplifying the apparent effectiveness
+ of their scheme.
  Empirical examination of SMS and Twitter traffic suggests that those assumption
 s are flawed, and that in practice, TS03.42 would be likely to offer poorer
  compression than suggested by their unrepresentative, if well meaning,
@@ -1756,10 +1751,9 @@ s are flawed, and that in practice, TS03.42 would be likely to offer poorer
 
 \begin_layout Standard
 A more fundamental issue is that TS03.42 does not anticipate that users of
- SMS and Twitter-like services already employ an ad-hoc form of user initiated
- compression in their messages, using various forms of short hand to fit
- their messages into the confines of the medium, e.g., shortening words such
- as 
+ SMS and Twitter-like services already employ an ad-hoc form of compression
+ in their messages, using various forms of short hand to fit their messages
+ into the confines of the medium, e.g., shortening words such as 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2437,9 +2431,8 @@ key "McCreadie:2012:BRT:2348283.2348495"
 \begin_layout Standard
 Overall for SMAZ, observed average compressed message lengths were all worse
  than the claimed range for English text, and in the case of Twitter messages
- much worse.
- Average compressed message lengths were 81.4% of the uncompressed message
- length.
+ much worse, with average compressed message lengths of 81.4% of the uncompressed
+ message length.
  Thus, while effective in many instances, SMAZ elegantly small dictionary-based
  approach is not sufficiently robust in the face of Twitter type traffic.
 \end_layout
@@ -2840,7 +2833,7 @@ y of words or word parts, but rather uses precomputed statistics for the
 \end_layout
 
 \begin_layout Standard
-As shortBWT does not appear to be publicly available, its performance can
+As shortBWT does not appear to be publicly avaiable, its performance can
  only be estimated by examining Figure 3 of 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2873,11 +2866,10 @@ key "clevertexting.com,paninikeypad.com,smszipper.com"
 .
  As closed-source proprietary offerings, there is limited information as
  to their operation.
- However, for the purposes of this paper our focus is only on compression
- performance.
- The two commercial offerings that provide marketing representations about
- the compression performance of their products claim that they achieve reduction
-s in message sizes of between 60% --- 70%
+ However, for the purposes of this paper our focus is on compression performance.
+ The two commercial offerings which make claims about the compression performanc
+e of their products make claims of reductions in message sizes of between
+ 60% --- 70%
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clevertexting.com"
@@ -2891,12 +2883,12 @@ key "smszipper.com"
 
 \end_inset
 
-of original size respectively.
- Assuming that their claims are not exaggerated, this implies similar performanc
-e to shortBWT.
- However, as with SMAZ, it is possible that either limited testing or other
- processes have resulted in a claim that in all likelihood may not be sustained
- when faced with realistic SMS or Twitter traffic volumes.
+.
+ Assuming that their claims are not exagerated, this implies similar performance
+ to shortBWT.
+ However, as with SMAZ, it is likely that either limited testing or other
+ processes have resulted in a claim that is not sustained when faced with
+ realistic SMS or Twitter traffic.
 \end_layout
 
 \begin_layout Subsection
@@ -2904,21 +2896,18 @@ Summary
 \end_layout
 
 \begin_layout Standard
-The state of short message compression can be summarised as having various
- solutions offering compressed message sizes which, on average, claimed
- or deomstrated to reduce compressed message sizes of at least 45% of the
- uncompressed message size.
- However, as previously explained, there is some reason to doubt that performanc
-e is in fact that good.
- As there is only openly available scheme, SMAZ, the validation of claims
- is very difficult.
- SMAZ performs more poorly than the claims among the closed systems.
+The state of the art of short message compression can be summarised as the
+ various solutions offering compressed message sizes which are, on average,
+ at least 45% of the uncompressed message size, although, as previously
+ explained, there is reason to doubt that performance is in fact that good.
+ SMAZ is the only openly available scheme, and it performs much more poorly
+ than the best claims among the closed systems.
  Thus there is, in the very least, the opportunity to match, or beat, the
  best closed systems through the creation of a new open-source short message
  compression scheme.
- The following section describes the process by which we achieved this,
- culminating in the implementation of the stats3 Short-Message Compression
- Scheme.
+ The following section describes the process by which we achieved this goal,
+ culminating in the implementation of the stats3 short-message compression
+ scheme.
 \end_layout
 
 \begin_layout Section
@@ -2970,7 +2959,7 @@ Messages were stripped of all letter-case information and non-textual characters
  and then encoded according to the 3rd order statistics.
  The length of the uncompressed message was encoded according to the message
  length statistics.
- The case of letters was compressed for each letter in a message, using
+ The case of letters was compressed by, for each letter in a message, using
  the 3rd-order case statistics gathered to predict the case of that letter.
 \end_layout
 
@@ -2982,7 +2971,7 @@ Dictionary Generation
 In addition, word-level analysis was performed, using all characters other
  than a-z and 0-9 to indicate a word break.
  All words occurring less than five times were discarded.
- Whenever a word was discarded, an attempt was made to assign the frequency
+ Whenever a word was discarded, it was attempted to assign the frequency
  to another word sharing the longest common prefix with the discarded word.
  For example, discarding four instances of 
 \begin_inset Quotes eld
@@ -3000,13 +2989,13 @@ bakfiets
 \begin_inset Quotes erd
 \end_inset
 
- increasing by four.
+ to increase by four.
 \end_layout
 
 \begin_layout Standard
-The entropy of each word remaining in the list was modeled using the 3rd
- order statistics previously computed, resulting in an estimate of the number
- of bits required to encode the word as a sequence of characters.
+The entropy of the each word remaining in the list was modelled using the
+ 3rd order statistics previously computed, resulting in an estimate of the
+ number of bits required to encode the word as a sequence of characters.
  This represents the saving possible by encoding the word as a single token
  (
 \begin_inset Formula $S_{potential}$
@@ -3019,9 +3008,9 @@ The entropy of each word remaining in the list was modeled using the 3rd
 \begin_layout Standard
 The number of instances of all remaining words was calculated, as was the
  total number of word breaks in the corpus.
- It was possible from this to compute the probability of a word substitution
- occurring at any single word break, from that the entropy, and hence the
- bit cost of either substituting or not substituting.
+ From this it was possible to compute the probability of a word substitution
+ occurring at any single word break, and from that the entropy, and hence
+ the bit cost of either substituting or not substituting.
  Substitution occurred with 
 \begin_inset Formula $p<0.5$
 \end_inset
@@ -3100,8 +3089,8 @@ Rare & Non-Text Characters
 \end_layout
 
 \begin_layout Standard
-Characters that were not in the list 69 common that are covered by the predictiv
-e model were exceptionally rare.
+Characters that were not in the 69 common that are covered by the predictive
+ model were exceptionally rare.
  While a more refined method is possible, the current implementation encodes
  those characters in a two part process.
  First, an interpolative coder
@@ -3157,14 +3146,13 @@ Second, if rare or non-textual characters were present, and the MSB of the
 \end_layout
 
 \begin_layout Standard
-The source code for the stats3 program can be found in a modified version
- of the SMAZ software at 
+The source code for the stats3 program can be found at 
 \begin_inset Flex URL
 status collapsed
 
 \begin_layout Plain Layout
 
-https://github.com/servalproject/smaz
+https://github.com/servalproject/smac
 \end_layout
 
 \end_inset
@@ -3728,11 +3716,7 @@ Private Twitter Corpus
 \begin_inset Float table
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -3949,7 +3933,7 @@ The difference in compression performance between SMAZ and stats3 for the
 \begin_layout Standard
 Focussing on the two largest SMS corpora as being the most likely to be
  predictive of the performance of stats3 on SMS messages in the general
- case, stats3 achieved a message-weighted average compressed message length
+ case, stats3 acheived a message-weighted average compressed message length
  of just 43.9% of uncompressed message length, outperforming all short message
  compression schemes surveyed in this paper.
  For more 
@@ -3962,26 +3946,9 @@ English like
 
  language, such as the GSM sample message 1 and the Pie Floater text, performanc
 e is even better, around 40% of uncompressed message size.
- Thus we suggest that through stats3, the state of short message compression
- has been advanced, particularly for the compression of SMS and Twitter
- messages.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename /Users/timelady/Documents/serval papers/compression.png
-	scale 50
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/timelady/Documents/serval papers/histogram.png
-	scale 50
-
-\end_inset
-
-
+ Thus we suggest that through stats3, the state of the art in short message
+ compression has been advanced, particularly for the compression of SMS
+ and Twitter messages.
 \end_layout
 
 \begin_layout Section
@@ -3992,25 +3959,25 @@ Future Work
 There are several areas that offer potential for improving the performance
  of the stats3 scheme.
  First, encoding of rare and non-textual characters, including unicode character
-s has been left relatively unexplored.
- Second, higher order statistical modeling of the case of letters in words
- is likely to result in in a degree of improvement.
- However, the area where the most yield can be expected is in improving
- the mono-case textual character encoder, which typically accounts for 90%
- of the length of a compressed message.
+s has been left all but unexplored.
+ Second, higher order statistical modelling of the case of letters in words
+ is likely to result in some improvements there.
+ However, the area where the most yield is expected is on improving the
+ mono-case textual character encoder, which typically accounts for 90% of
+ the length of a compressed message.
  Using fixed-order statistics is suboptimal here, because it introduces
  relatively high data storage requirements (approximately 1.5MB for 3rd order
  statistics for a 69-character alphabet), especially for mobile devices,
  even though most of those statistics will be zero.
  A better approach is to replace the fixed-order model with a variable-order
- model that models more deeply only where it is warranted.
+ model that models more deeply where it is warranted, and less deeply otherwise.
  This has the potential to do away with the need for a separate word list
  altogether, which both simplifies and potentially improves the compression
  and speed performance of the system.
  Finally, the variable-order statistical model should be loadable from a
- binary file format, rather than be an intrinsic part of the program, so
- that the model can be updated as desired in applications where that would
- be useful.
+ binary file format, rather than be an irreplacable part of the program,
+ so that the model can be updated as desired in applications where that
+ would be useful.
 \end_layout
 
 \begin_layout Standard
