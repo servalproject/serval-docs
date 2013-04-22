@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="12cm" height="10cm" viewBox="-1 8 233 189" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2.77556e-16; stroke: #ffffff" x="0" y="12" width="232" height="184.875"/>
+  <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="50" y="42">
+    <tspan x="50" y="42"></tspan>
+  </text>
+  <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="50" y="42">
+    <tspan x="50" y="42"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="38" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="38" width="80" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="62" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="62" width="80" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="67.95">
+    <tspan x="12" y="67.95">RX SID</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="46" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="46" width="80" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="43.95">
+    <tspan x="12" y="43.95">Sender SID</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="51.95">
+    <tspan x="12" y="51.95">Recipient SID</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="70" width="50" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="70" width="50" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="75.95">
+    <tspan x="12" y="75.95">TTL</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="60" y="70" width="30" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="60" y="70" width="30" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="64" y="75.95">
+    <tspan x="64" y="75.95">QoS</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="78" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="78" width="80" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="91.95">
+    <tspan x="12" y="91.95">Payload !E &amp;&amp; !S</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="83.95">
+    <tspan x="12" y="83.95">Payload size  N</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="166" y="67.95">
+    <tspan x="166" y="67.95">From router</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="34" y="30" width="12" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="34" y="30" width="12" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="40" y="35.95">
+    <tspan x="40" y="35.95">1H</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="46" y="30" width="12" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="46" y="30" width="12" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="52" y="35.95">
+    <tspan x="52" y="35.95">E</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="43.95">
+    <tspan x="92" y="43.95">0..33</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="51.95">
+    <tspan x="92" y="51.95">0..33</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="67.95">
+    <tspan x="92" y="67.95">0..33</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="75.95">
+    <tspan x="92" y="75.95">0..1</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="83.95">
+    <tspan x="92" y="83.95">2</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="35.95">
+    <tspan x="92" y="35.95">1</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="68" y="99.95">
+    <tspan x="68" y="99.95">1..8</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="30" width="12" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="30" width="12" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="16" y="35.95">
+    <tspan x="16" y="35.95">ST</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="22" y="30" width="12" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="22" y="30" width="12" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="28" y="35.95">
+    <tspan x="28" y="35.95">RB</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="58" y="30" width="12" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="58" y="30" width="12" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="64" y="35.95">
+    <tspan x="64" y="35.95">S</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="68" y="107.95">
+    <tspan x="68" y="107.95">N</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="51.95">
+    <tspan x="120" y="51.95">0 if RB</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="43.95">
+    <tspan x="120" y="43.95">0 if ST</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="67.95">
+    <tspan x="120" y="67.95">0 if 1H || RB</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="75.95">
+    <tspan x="120" y="75.95">0 if 1H</tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="16">
+    <tspan x="112" y="16">MDP Packet Structure</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="54" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="54" width="80" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="59.95">
+    <tspan x="12" y="59.95">Broadcast ID</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="92" y="59.95">
+    <tspan x="92" y="59.95">0 or 8</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120" y="59.95">
+    <tspan x="120" y="59.95">8 if RB &amp;&amp; !1H</tspan>
+  </text>
+  <text font-size="4.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="34" y="50">
+    <tspan x="34" y="50"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #e6e6fa" x="82" y="158" width="56" height="26"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="82" y="158" width="56" height="26"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="84" y="163.25">
+    <tspan x="84" y="163.25">crypto_sign</tspan>
+    <tspan x="84" y="170.306">(Sender SAS)</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="84" y="91.95">
+    <tspan x="84" y="91.95">Payload !E &amp;&amp; S</tspan>
+  </text>
+  <g>
+    <rect style="fill: #e6e6fa" x="154" y="114" width="56" height="64"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="154" y="114" width="56" height="64"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="156" y="91.95">
+    <tspan x="156" y="91.95">Payload E &amp;&amp; S</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="94" width="28" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="94" width="28" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="99.95">
+    <tspan x="12" y="99.95">Src port</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="10" y="102" width="56" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="10" y="102" width="56" height="48"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="12" y="107.95">
+    <tspan x="12" y="107.95">Content</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="38" y="94" width="28" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="38" y="94" width="28" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="40" y="99.95">
+    <tspan x="40" y="99.95">Dst port</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="140" y="107.95">
+    <tspan x="140" y="107.95">1..8</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="140" y="115.95">
+    <tspan x="140" y="115.95">N</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="119.95">
+    <tspan x="212" y="119.95">16</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="154" y="102" width="56" height="12"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="154" y="102" width="56" height="12"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="156" y="107.95">
+    <tspan x="156" y="107.95">Nonce</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="107.95">
+    <tspan x="212" y="107.95">24</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="140" y="163.95">
+    <tspan x="140" y="163.95">64</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="82" y="102" width="28" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="82" y="102" width="28" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="84" y="107.95">
+    <tspan x="84" y="107.95">Src port</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="82" y="110" width="56" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="82" y="110" width="56" height="48"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="110" y="102" width="28" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="110" y="102" width="28" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="107.95">
+    <tspan x="112" y="107.95">Dst port</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="84" y="115.95">
+    <tspan x="84" y="115.95">Content</tspan>
+  </text>
+  <g>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="156" y="122" width="26" height="8"/>
+    <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="158" y="127.95">
+      <tspan x="158" y="127.95">Src port</tspan>
+    </text>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="156" y="130" width="52" height="46"/>
+    <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="158" y="135.95">
+      <tspan x="158" y="135.95">Content</tspan>
+    </text>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="182" y="122" width="26" height="8"/>
+    <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="184" y="127.95">
+      <tspan x="184" y="127.95">Dst port</tspan>
+    </text>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="156" y="119.95">
+    <tspan x="156" y="119.95">crypto_box()</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="127.95">
+    <tspan x="212" y="127.95">1..8</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="135.95">
+    <tspan x="212" y="135.95">N</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="82" y="94" width="56" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="82" y="94" width="56" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="84" y="99.95">
+    <tspan x="84" y="99.95">Signing algorithm</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="140" y="99.95">
+    <tspan x="140" y="99.95">1</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="154" y="94" width="56" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="154" y="94" width="56" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="156" y="99.95">
+    <tspan x="156" y="99.95">Authcrypt algo</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="99.95">
+    <tspan x="212" y="99.95">1</tspan>
+  </text>
+</svg>

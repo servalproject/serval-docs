@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="16cm" height="13cm" viewBox="-1 -1 307 245" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #e6e6fa" x="16" y="52" width="196" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="16" y="52" width="196" height="36"/>
+  </g>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="16" y="58.25">
+    <tspan x="16" y="58.25"> Asterisk</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2.77556e-16; stroke: #ffffff" x="0" y="0" width="306.196" height="244"/>
+  <g>
+    <rect style="fill: #e6e6fa" x="72" y="188" width="216" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="72" y="188" width="216" height="40"/>
+  </g>
+  <g>
+    <rect style="fill: #e6e6fa" x="56" y="100" width="200" height="64"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="56" y="100" width="200" height="64"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="144" y="116" width="104" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="144" y="116" width="104" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="196" y="122.422">
+    <tspan x="196" y="122.422">Rhizome</tspan>
+    <tspan x="196" y="129.478">(file distribution)</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="88" y="140" width="76" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="88" y="140" width="76" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="126" y="149.95">
+    <tspan x="126" y="149.95">MDP</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="168" y="140" width="24" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="168" y="140" width="24" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="180" y="149.95">
+    <tspan x="180" y="149.95">HTTP</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="168" y="196" width="24" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="168" y="196" width="24" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="180" y="201.95">
+    <tspan x="180" y="201.95">TCP</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="136" y="196" width="24" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="136" y="196" width="24" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="148" y="201.95">
+    <tspan x="148" y="201.95">UDP</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="136" y="204" width="56" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="136" y="204" width="56" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="164" y="209.95">
+    <tspan x="164" y="209.95">IP</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="180" y1="132" x2="180" y2="134.7"/>
+    <polygon style="fill: #000000" points="177.5,134.7 180,139.7 182.5,134.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="177.5,134.7 180,139.7 182.5,134.7 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="152" y1="132" x2="152" y2="134.7"/>
+    <polygon style="fill: #000000" points="149.5,134.7 152,139.7 154.5,134.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="149.5,134.7 152,139.7 154.5,134.7 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="148" y1="156" x2="148" y2="190.7"/>
+    <polygon style="fill: #000000" points="145.5,190.7 148,195.7 150.5,190.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="145.5,190.7 148,195.7 150.5,190.7 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="180" y1="156" x2="180" y2="190.7"/>
+    <polygon style="fill: #000000" points="177.5,190.7 180,195.7 182.5,190.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="177.5,190.7 180,195.7 182.5,190.7 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="116" y="116" width="24" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="116" y="116" width="24" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="128" y="125.95">
+    <tspan x="128" y="125.95">VoMP</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="128" y1="132" x2="128" y2="134.7"/>
+    <polygon style="fill: #000000" points="125.5,134.7 128,139.7 130.5,134.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="125.5,134.7 128,139.7 130.5,134.7 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="196" y="196" width="84" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="196" y="196" width="84" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="238" y="201.95">
+    <tspan x="238" y="201.95">VFS</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="196" y="204" width="84" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="196" y="204" width="84" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="238" y="209.95">
+    <tspan x="238" y="209.95">Ramdisk FS</tspan>
+  </text>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="106.25">
+    <tspan x="56" y="106.25"> Servald - GNU C</tspan>
+  </text>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72" y="194.25">
+    <tspan x="72" y="194.25"> Linux Kernel</tspan>
+    <tspan x="72" y="202.717"> - GNU C</tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="152" y="16">
+    <tspan x="152" y="16">Serval - Commotion Wireless</tspan>
+    <tspan x="152" y="25.8778">(Open BTS)</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="136" y="212" width="56" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="136" y="212" width="56" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="164" y="217.95">
+    <tspan x="164" y="217.95">Wi-Fi driver</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="256" y="172" width="24" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="256" y="172" width="24" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="268" y="177.95">
+    <tspan x="268" y="177.95">SQLite</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="268" y1="180" x2="268" y2="190.7"/>
+    <polygon style="fill: #000000" points="265.5,190.7 268,195.7 270.5,190.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="265.5,190.7 268,195.7 270.5,190.7 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="196" y="140" width="24" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="196" y="140" width="24" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="208" y="149.95">
+    <tspan x="208" y="149.95">Config</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="208" y1="156" x2="208" y2="190.7"/>
+    <polygon style="fill: #000000" points="205.5,190.7 208,195.7 210.5,190.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="205.5,190.7 208,195.7 210.5,190.7 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="224" y="140" width="24" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="224" y="140" width="24" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="236" y="149.95">
+    <tspan x="236" y="149.95">Logging</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="236" y1="156" x2="236" y2="190.7"/>
+    <polygon style="fill: #000000" points="233.5,190.7 236,195.7 238.5,190.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="233.5,190.7 236,195.7 238.5,190.7 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="248,124 268,124 268,166.7 "/>
+    <polygon style="fill: #000000" points="265.5,166.7 268,171.7 270.5,166.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="265.5,166.7 268,171.7 270.5,166.7 "/>
+  </g>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="64" y="178.25">
+    <tspan x="64" y="178.25">Android libraries</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="120" y="64" width="56" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="120" y="64" width="56" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="148" y="70.4222">
+    <tspan x="148" y="70.4222">Channel driver</tspan>
+    <tspan x="148" y="77.4778">app_servaldna.so</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="88" y="116" width="24" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="88" y="116" width="24" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="100" y="125.95">
+    <tspan x="100" y="125.95">DNA</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="100" y1="132" x2="100" y2="134.7"/>
+    <polygon style="fill: #000000" points="97.5,134.7 100,139.7 102.5,134.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="97.5,134.7 100,139.7 102.5,134.7 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="64" y="116" width="24" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="64" y="116" width="24" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="76" y="122.422">
+    <tspan x="76" y="122.422">DNA</tspan>
+    <tspan x="76" y="129.478">Helper</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="24" y="116" width="28" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="24" y="116" width="28" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="38" y="122.422">
+    <tspan x="38" y="122.422">Helper</tspan>
+    <tspan x="38" y="129.478">script</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="64" y1="124" x2="57.3" y2="124"/>
+    <polygon style="fill: #000000" points="57.3,121.5 52.3,124 57.3,126.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="57.3,121.5 52.3,124 57.3,126.5 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="24" y="64" width="28" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="24" y="64" width="28" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="38" y="73.95">
+    <tspan x="38" y="73.95">Dial plan</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="38" y1="116" x2="38" y2="85.3"/>
+    <polygon style="fill: #000000" points="40.5,85.3 38,80.3 35.5,85.3 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="40.5,85.3 38,80.3 35.5,85.3 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="128" y1="80" x2="128" y2="110.7"/>
+    <polygon style="fill: #000000" points="125.5,110.7 128,115.7 130.5,110.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="125.5,110.7 128,115.7 130.5,110.7 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="84" y="64" width="32" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="84" y="64" width="32" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="100" y="70.4222">
+    <tspan x="100" y="70.4222">Serval AGI</tspan>
+    <tspan x="100" y="77.4778">script</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="100" y1="80" x2="100" y2="110.7"/>
+    <polygon style="fill: #000000" points="97.5,110.7 100,115.7 102.5,110.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="97.5,110.7 100,115.7 102.5,110.7 "/>
+  </g>
+</svg>

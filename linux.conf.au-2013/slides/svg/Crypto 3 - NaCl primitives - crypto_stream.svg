@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="12cm" height="10cm" viewBox="-1 -1 233 185" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2.77556e-16; stroke: #ffffff" x="0" y="0" width="232" height="184.875"/>
+  <g>
+    <rect style="fill: #ffffff" x="160" y="96.7" width="6.7" height="6.6"/>
+    <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="160" y="101.95">
+      <tspan x="160" y="101.95"> M</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="24" y="46" width="68" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="24" y="46" width="68" height="8"/>
+  </g>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="12">
+    <tspan x="112" y="12">Elliptic Curve Cryptography</tspan>
+    <tspan x="112" y="21.8778">NaCl primitives</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="20" y="40">
+    <tspan x="20" y="40"></tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="58" y="51.95">
+    <tspan x="58" y="51.95">Secret key</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="24" y="51.95">
+    <tspan x="24" y="51.95">32 </tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="180" y="46" width="30" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="180" y="46" width="30" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="195" y="51.95">
+    <tspan x="195" y="51.95">Nonce</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="210" y="51.95">
+    <tspan x="210" y="51.95"> 8</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="24" y="72" width="56" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="24" y="72" width="56" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="52" y="81.95">
+    <tspan x="52" y="81.95">Message</tspan>
+  </text>
+  <g>
+    <rect style="fill: #e6e6fa" x="112" y="36" width="40" height="28" rx="4" ry="4"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-linejoin: round; stroke: #000000" x="112" y="36" width="40" height="28" rx="4" ry="4"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="104" y="92" width="56" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="104" y="92" width="56" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="101.95">
+    <tspan x="132" y="101.95">Cipherstream</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="24" y="81.95">
+    <tspan x="24" y="81.95">M </tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:Courier 10 Pitch;font-style:normal;font-weight:700" x="132" y="48.0722">
+    <tspan x="132" y="48.0722">crypto_</tspan>
+    <tspan x="132" y="55.1278">stream</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="92" y1="50" x2="108.7" y2="50"/>
+    <polygon style="fill: #000000" points="108.7,51.5 111.7,50 108.7,48.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="108.7,51.5 111.7,50 108.7,48.5 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="180" y1="50" x2="155.3" y2="50"/>
+    <polygon style="fill: #000000" points="155.3,48.5 152.3,50 155.3,51.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="155.3,48.5 152.3,50 155.3,51.5 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="132" y1="64" x2="132" y2="88.7"/>
+    <polygon style="fill: #000000" points="130.5,88.7 132,91.7 133.5,88.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="130.5,88.7 132,91.7 133.5,88.7 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="52" y1="88" x2="52" y2="92.7"/>
+    <polygon style="fill: #000000" points="50.5,92.7 52,95.7 53.5,92.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="50.5,92.7 52,95.7 53.5,92.7 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="52" y1="104" x2="52" y2="108.7"/>
+    <polygon style="fill: #000000" points="50.5,108.7 52,111.7 53.5,108.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="50.5,108.7 52,111.7 53.5,108.7 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="104" y1="100" x2="59.3" y2="100"/>
+    <polygon style="fill: #000000" points="59.3,98.5 56.3,100 59.3,101.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="59.3,98.5 56.3,100 59.3,101.5 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="24" y="112" width="56" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="24" y="112" width="56" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="52" y="121.95">
+    <tspan x="52" y="121.95">Ciphertext</tspan>
+  </text>
+  <g>
+    <g>
+      <ellipse style="fill: #e6e6fa" cx="52" cy="100" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="52" cy="100" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="52" cy="100" rx="4" ry="4"/>
+    </g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="50" y1="98" x2="54" y2="102"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="54" y1="98" x2="50" y2="102"/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="52" y1="128" x2="52" y2="132.7"/>
+    <polygon style="fill: #000000" points="50.5,132.7 52,135.7 53.5,132.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="50.5,132.7 52,135.7 53.5,132.7 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="52" y1="144" x2="52" y2="148.7"/>
+    <polygon style="fill: #000000" points="50.5,148.7 52,151.7 53.5,148.7 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="50.5,148.7 52,151.7 53.5,148.7 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="24" y="152" width="56" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="24" y="152" width="56" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="52" y="161.95">
+    <tspan x="52" y="161.95">Message</tspan>
+  </text>
+  <g>
+    <g>
+      <ellipse style="fill: #e6e6fa" cx="52" cy="140" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="52" cy="140" rx="4" ry="4"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" cx="52" cy="140" rx="4" ry="4"/>
+    </g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="50" y1="138" x2="54" y2="142"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x1="54" y1="138" x2="50" y2="142"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="24" y="121.95">
+    <tspan x="24" y="121.95">M </tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:normal" x="24" y="161.95">
+    <tspan x="24" y="161.95">M </tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="132,108 132,140 59.3,140 "/>
+    <polygon style="fill: #000000" points="59.3,138.5 56.3,140 59.3,141.5 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="59.3,138.5 56.3,140 59.3,141.5 "/>
+  </g>
+</svg>

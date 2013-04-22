@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="12cm" height="10cm" viewBox="-1 -1 233 185" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2.77556e-16; stroke: #ffffff" x="0" y="0" width="232" height="184.875"/>
+  <image x="52" y="48" width="128" height="128" xlink:href="file:///home/andrewb/Desktop/Serval%20Project/Linux.conf.au%202013/qr-download-Serval-0.91-pre-lca.apk.png"/>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="116" y="8">
+    <tspan x="116" y="8">Serval Mesh app for Android 2.3 “Froyo” and later</tspan>
+    <tspan x="116" y="16.4667">downloadable now from a URL near you...</tspan>
+    <tspan x="116" y="24.9333">http://developer.servalproject.org/files/Serval-0.91-pre-lca.apk</tspan>
+  </text>
+  <text font-size="6.77333" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="116" y="38.325">
+    <tspan x="116" y="38.325">http://bit.ly/14nN9Jd</tspan>
+  </text>
+</svg>

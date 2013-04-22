@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="12cm" height="10cm" viewBox="-1 -1 233 185" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2.77556e-16; stroke: #ffffff" x="0" y="0" width="232" height="184.875"/>
+  <g>
+    <rect style="fill: #e6e6fa" x="128" y="52" width="80" height="122"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="128" y="52" width="80" height="122"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="80" y="29.95">
+    <tspan x="80" y="29.95">2048</tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="112" y="12">
+    <tspan x="112" y="12">Serval Keyring File structure</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="20" y="24" width="56" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="20" y="24" width="56" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="22" y="29.95">
+    <tspan x="22" y="29.95">Allocation map</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="80" y="45.95">
+    <tspan x="80" y="45.95">2048</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="20" y="40" width="56" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="20" y="40" width="56" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="22" y="46.4222">
+    <tspan x="22" y="46.4222">Keyring salt</tspan>
+    <tspan x="22" y="53.4778">(nonce)</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="20" y="58" width="56" height="32"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="20" y="58" width="56" height="32"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="80" y="63.95">
+    <tspan x="80" y="63.95">4096</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="22" y="64.4222">
+    <tspan x="22" y="64.4222">Private Key Record</tspan>
+    <tspan x="22" y="71.4778">PKR #1</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="20" y="92" width="56" height="32"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="20" y="92" width="56" height="32"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="22" y="98.4222">
+    <tspan x="22" y="98.4222">Private Key Record</tspan>
+    <tspan x="22" y="105.478">PKR #2</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="20" y="142" width="56" height="32"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="20" y="142" width="56" height="32"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="80" y="151.95">
+    <tspan x="80" y="151.95">4096</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="22" y="152.422">
+    <tspan x="22" y="152.422">Private Key Record</tspan>
+    <tspan x="22" y="159.478">PKR #16383</tspan>
+  </text>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="20,134 20,134 20,126 76,126 76,134 76,134 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" points="20,136 20,136 20,144 76,144 76,136 76,136 "/>
+  <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" d="M 20 134 C 34,142 62,126 76,134"/>
+  <path style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" d="M 20 136 C 34,144 62,128 76,136"/>
+  <g>
+    <rect style="fill: #ffffff" x="128" y="28" width="80" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="128" y="28" width="80" height="8"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="130" y="33.95">
+    <tspan x="130" y="33.95">PKR salt (nonce)</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="33.95">
+    <tspan x="212" y="33.95">32</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="128" y="36" width="80" height="16"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="128" y="36" width="80" height="16"/>
+  </g>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="130" y="41.95">
+    <tspan x="130" y="41.95">PKR MAC (signature)</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="41.95">
+    <tspan x="212" y="41.95">64</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="130" y="60" width="76" height="8"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="65.95">
+    <tspan x="132" y="65.95">Rotation offset</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="65.95">
+    <tspan x="212" y="65.95">2</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="130" y="78" width="76" height="16"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="84.4222">
+    <tspan x="132" y="84.4222">Cryptobox key pair</tspan>
+    <tspan x="132" y="91.4778">(SID + secret)</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="75.95">
+    <tspan x="212" y="75.95">1</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="130" y="70" width="76" height="8"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="75.95">
+    <tspan x="132" y="75.95">Key type = 1</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="83.95">
+    <tspan x="212" y="83.95">64</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="130" y="57.95">
+    <tspan x="130" y="57.95">crypto_stream_xor</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="130" y="104" width="76" height="16"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="110.422">
+    <tspan x="132" y="110.422">Cryptosign key pair</tspan>
+    <tspan x="132" y="117.478">(SAS + secret)</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="109.95">
+    <tspan x="212" y="109.95">64</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="130" y="130" width="76" height="8"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="135.95">
+    <tspan x="132" y="135.95">Rhizome secret key (RS)</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="135.95">
+    <tspan x="212" y="135.95">32</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="101.95">
+    <tspan x="212" y="101.95">1</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="130" y="96" width="76" height="8"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="101.95">
+    <tspan x="132" y="101.95">Key type = 2</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="127.95">
+    <tspan x="212" y="127.95">1</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="130" y="122" width="76" height="8"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="127.95">
+    <tspan x="132" y="127.95">Key type = 3</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="130" y="148" width="76" height="16"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="153.95">
+    <tspan x="132" y="153.95">DID + Name</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="153.95">
+    <tspan x="212" y="153.95">96</tspan>
+  </text>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="212" y="145.95">
+    <tspan x="212" y="145.95">1</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke: #000000" x="130" y="140" width="76" height="8"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="132" y="145.95">
+    <tspan x="132" y="145.95">Key type = 4</tspan>
+  </text>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 4; stroke: #bfbfbf" x1="76" y1="58" x2="128" y2="28"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 0.6; stroke-dasharray: 4; stroke: #bfbfbf" x1="76" y1="90" x2="128" y2="174"/>
+  <text font-size="5.64444" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="80" y="97.95">
+    <tspan x="80" y="97.95">4096</tspan>
+  </text>
+</svg>
