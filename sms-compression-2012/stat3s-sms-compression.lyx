@@ -89,6 +89,40 @@ Flinders University
 {corey,jenny,jeremy}@servalproject.org
 \end_layout
 
+\begin_layout Abstract
+Compression of short text strings, such as the GSM Short Message Service
+ (SMS) and Twitter messages, has received relatively little attention compared
+ with the compression of longer texts.
+ This is not surprising given that for typical cellular and internet-based
+ networks the cost of compression probably outweighs the cost of delivering
+ uncompressed messages.
+ However, this is not necessarily true where the cost of data transport
+ is high, for example where satellite back-haul is involved, or on bandwidth-sta
+rved mobile mesh networks, such as the mesh networks for disaster relief,
+ rural, remote and developing contexts envisaged by the Serval Project
+\begin_inset CommandInset citation
+LatexCommand cite
+key "servalprojectwhitepaper,servalproject,meshms2012,Gardner-Stephen:2011:SMS:2185216.2185245"
+
+\end_inset
+
+.
+ This motivated the development of a state-of-art text compression algorithm
+ that could be used to compress mesh-based short-message traffic, culminating
+ in the development of the stats3 SMS compression scheme described in this
+ paper.
+ Stats3 uses word frequency and 3rd-order letter statistics embodied in
+ a pre-constructed dictionary to effect lossless compression of short text
+ messages.
+ This scheme shows that our scheme compressing text messages typically reduces
+ messages to less than half of their original size, and in so doing substantiall
+y outperforms all public SMS compression systems, while also matching or
+ exceeding, the marketing claims of the commercial options known to the
+ authors.
+ We also outline approaches for future work that has the potential to further
+ improve the performance and practical utility of stats3.
+\end_layout
+
 \begin_layout Section
 Introduction
 \end_layout
@@ -162,7 +196,7 @@ key "clevertexting.com"
 
 \end_inset
 
- and 50% ---- 55%
+ and 50% --- 55%
 \begin_inset CommandInset citation
 LatexCommand cite
 key "smszipper.com"
@@ -2295,7 +2329,7 @@ on, which are outside the scope of this paper.
  Twitter traffic is difficult, with performance not likely to be better
  than reducing message sizes to 50% of original size on average.
  Relative performance can be inferred by comparing the relative performance
- on the tree sample SMS messages.
+ on the three TS03.42 sample SMS messages.
  For example, Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2876,7 +2910,7 @@ key "clevertexting.com"
 
 \end_inset
 
- and 45% ---- 50%
+ and 45% --- 50%
 \begin_inset CommandInset citation
 LatexCommand cite
 key "smszipper.com"
@@ -3089,8 +3123,8 @@ Rare & Non-Text Characters
 \end_layout
 
 \begin_layout Standard
-Characters that were not in the 69 common that are covered by the predictive
- model were exceptionally rare.
+Characters that were not in the 69 common characters that are covered by
+ the predictive model were exceptionally rare.
  While a more refined method is possible, the current implementation encodes
  those characters in a two part process.
  First, an interpolative coder
@@ -3924,7 +3958,7 @@ It is clear that stats3 is much slower than SMAZ, but that in return, stats3
 \begin_layout Standard
 The difference in compression performance between SMAZ and stats3 for the
  more SMS and Twitter-like messages is particularly striking, providing
- evidence for what is already intuitively apparent; that SMS and Twitter
+ evidence for what is already intuitively apparent, i.e., that SMS and Twitter
  messages differ substantially in composition from normal language.
  This also suggests that TS03.42 requires substantial revising if it is to
  remain relevant in the light of realistic message composition.
