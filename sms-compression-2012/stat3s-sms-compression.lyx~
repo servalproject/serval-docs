@@ -3958,7 +3958,7 @@ It is clear that stats3 is much slower than SMAZ, but that in return, stats3
 \begin_layout Standard
 The difference in compression performance between SMAZ and stats3 for the
  more SMS and Twitter-like messages is particularly striking, providing
- evidence for what is already intuitively apparent; that SMS and Twitter
+ evidence for what is already intuitively apparent, i.e., that SMS and Twitter
  messages differ substantially in composition from normal language.
  This also suggests that TS03.42 requires substantial revising if it is to
  remain relevant in the light of realistic message composition.
