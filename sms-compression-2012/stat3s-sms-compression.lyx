@@ -2868,7 +2868,8 @@ y of words or word parts, but rather uses precomputed statistics for the
 
 \begin_layout Standard
 As shortBWT does not appear to be publicly avaiable, its performance can
- only be estimated by examining Figure 3 of 
+ only be estimated by examining Figure 3 of Constantinescu et al (2004)
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "doi:10.1117/12.507758"

@@ -2330,7 +2330,7 @@ on, which are outside the scope of this paper.
  than reducing message sizes to 50% of original size on average.
  Relative performance can be inferred by comparing the relative performance
  on the three TS03.42 sample SMS messages.
- For example, Figure 
+ For example, Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Performance-of-GSM"
