@@ -1,0 +1,264 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Securing MeshMS
+\end_layout
+
+\begin_layout Author
+Paul Gardner-Stephen, Alexandra Sclapari, Andrew Bettison, Romana Challans,
+ Jeremy Lakeman
+\end_layout
+
+\begin_layout Abstract
+Serval MeshMS is a private messaging protocol built on top of the Serval
+ Rhizome store-and-forward delay tolerant networking platform.
+ As with all Serval Project technologies, MeshMS is designed to facilitate
+ communications by individuals and agencies during and following emergency,
+ disaster or unrest, as well as in areas where conventional mobile telecommunica
+tions services and infrastructure may be unavailable, unaffordable or untrustwor
+thy.
+\end_layout
+
+\begin_layout Abstract
+Privacy of communications between parties, including privacy of the existence
+ of communications between parties are important security considerations
+ for such a system, as knowledge of a persons social graph or the content
+ of their communications with others may compromise their personal safety.
+ Therefore it is imperative to provide the strongest possible protection
+ for these, without rendering the resulting system difficult to use.
+\end_layout
+
+\begin_layout Abstract
+A particular challenge that we address in this paper is how to keep a person's
+ social graph private in the face of a store-and-forward based system that
+ gives potential attackers easy access to all transmissions on the network.
+ These constraints necessitate a trade-off of security and efficiency.
+\end_layout
+
+\begin_layout Abstract
+Our solution is to encrypt both communications payloads and also the origin
+ of the communications, such that only the recipient can determine who the
+ sender is.
+ This preserves ease of routing of encrypted messages to their destination.
+ This paper describes this solution, and is accompanied by an initial analysis
+ of the security factors involved.
+\end_layout
+
+\begin_layout Section
+Background
+\end_layout
+
+\begin_layout Standard
+In order to understand the problem, it is necessary to explain the formulation
+ of MeshMS over the Serval Mesh protocols, and the information required
+ by a corresponding party to access conversations carried as MeshMS messages.
+\end_layout
+
+\begin_layout Subsection
+The Serval Mesh
+\end_layout
+
+\begin_layout Standard
+The Serval Mesh is designed as a resilient, fault-tolerant and fully distributed
+ network that uses smart-phones as the only required network component.
+ The Serval Mesh consists of software that is installed on compatible smart-phon
+es, and uses the Wi-Fi capability of those devices to form a mesh network.
+ A novel feature of the Serval Mesh that is particularly useful in situations
+ of disaster and unrest is the ability to share the software from phone
+ to phone, thus facilitating logistics-free deployment during a disaster.
+\end_layout
+
+\begin_layout Standard
+To avoid the need to obtain super-user privilege on smart-phones the Serval
+ Mesh software toggles the Wi-Fi radio between access-point and managed
+ (client) modes.
+ This is the direct result of the failure of most mobile operating systems
+ to provide public APIs to access ad-hoc Wi-Fi, which is the superior solution
+ for forming mesh networks.
+ 
+\end_layout
+
+\begin_layout Standard
+The result of the lack of ad-hoc Wi-Fi is that nodes are typically only
+ in intermittent contact with other nodes on the network.
+ Thus end-to-end communications protocols such as UDP and TCP are unusable,
+ because an end-to-end link may never exist.
+ To address this and other limitations with end-to-end communications protocols
+ on mobile ad-hoc networks (MANETs), the Serval Mesh contains a store-and-forwar
+d bundle-based protocol that provides delay-tolerant networking.
+ This protocol is called Serval Rhizome.
+\end_layout
+
+\begin_layout Standard
+Rhizome works by widely distributing 
+\begin_inset Quotes eld
+\end_inset
+
+bundles
+\begin_inset Quotes erd
+\end_inset
+
+ which consist of a (possibly empty) file and a short meta-data block called
+ the manifest.
+ The manifest contains information such as the sender and recipient of a
+ bundle, as well as cryptographic signatures that prevent tampering with
+ the meta-data or attached file.
+ When the sender and recipient of a bundle both specified, Rhizome will
+ by default encrypt the attached file using a symmetric cipher key derived
+ from the Diffie-Hellman shared secret that can be derived from one public
+ and one private key of the sender and recipient.
+ That is, only the sender and recipient who have posession of one of the
+ required private keys can encrypt or decrypt the file.
+ This provides a mechanism for the protection of the content of a Rhizome-based
+ communication.
+ However, it does nothing to protect the identity of the sender or recipient
+ of the bundle, which is the subject of this paper.
+\end_layout
+
+\begin_layout Standard
+XXX - Talk about how bundle key is based on sender and recipient shared
+ secret, thus preventing spoofing of sender or recipient in a bundle.
+\end_layout
+
+\begin_layout Standard
+Bundles can be revoked or replaced with newer versions of the bundle, but
+ only with possession of the private key that was used to create the bundle.
+ In addition to the outright replacement of the contents of a bundle, provision
+ exists within the Rhizome protocol for bundles to nominate themselves as
+ Journal Bundles.
+ Journal Bundles may append new data to the end of their file, but may not
+ alter data contained in the already published portion of the bundle.
+ This allows incremental transfer of only the new content in a journal bundle,
+ which can greatly increase network efficiency.
+\end_layout
+
+\begin_layout Subsection
+Serval MeshMS
+\end_layout
+
+\begin_layout Standard
+Serval MeshMS is intended for the transport over the Serval Mesh of SMS,
+ MMS and PXT-style messages between pairs of individuals.
+ Rhizome transported Journal Bundles are used to carry the messages, so
+ that as additional messages are sent and received, only the previously
+ undelivered content requires transport over the network.
+\end_layout
+
+\begin_layout Standard
+On the receiver side, the Serval Mesh software uses the 
+\begin_inset Quotes eld
+\end_inset
+
+meshms list conversations
+\begin_inset Quotes erd
+\end_inset
+
+ command to scan for bundles that correspond to plys of a conversation thread.
+ In a thread between A and B, there will be either one or both plys from
+ A to B, and from B to A.
+ Group messaging is beyond the scope of the current paper.
+ Plys are identified by their sender and recipient fields from the bundle
+ meta-data.
+ Thus the sender and recipient fields must be discernable by the recipient.
+ This requirement of identifiability of parties by the corresponding parties
+ complicates the objective of concealing their identities from non-corresponding
+ parties.
+\end_layout
+
+\begin_layout Subsection
+Re-Statement of Problem
+\end_layout
+
+\begin_layout Standard
+The problem can be thus be restated as: how to arrange the manifest to contain
+ the identities of the corresponding parties, but in a manner that only
+ the corresponding parties can comprehend.
+ 
+\end_layout
+
+\begin_layout Standard
+Moreover, the comprehension of corresponding parties of a conversation must
+ be a rapid process, so that it can be performed in real-time on a mobile
+ device that may be caching bundles for many correspondants other than itself.
+ This renders it attempt a cryptographic protocol on all MeshMS bundles,
+ and there must be sufficient information available to the recipient to
+ filter irrelevant bundles when seeking to identify plys that involve itself.
+\end_layout
+
+\begin_layout Section
+Potential Solutions
+\end_layout
+
+\begin_layout Subsection
+Obfruscate Sender & Recipient
+\end_layout
+
+\begin_layout Subsection
+Obfruscate Recipient
+\end_layout
+
+\begin_layout Subsection
+Obfruscate Sender
+\end_layout
+
+\end_body
+\end_document
