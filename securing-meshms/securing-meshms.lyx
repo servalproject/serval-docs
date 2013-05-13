@@ -169,14 +169,9 @@ bundles
  That is, only the sender and recipient who have possession of one of the
  required private keys can encrypt or decrypt the file.
  This provides a mechanism for the protection of the content of a Rhizome-based
- communication.
+ communication against inspection or tampering by a 3rd party.
  However, it does nothing to protect the identity of the sender or recipient
  of the bundle, which is the subject of this paper.
-\end_layout
-
-\begin_layout Standard
-XXX - Talk about how bundle key is based on sender and recipient shared
- secret, thus preventing spoofing of sender or recipient in a bundle.
 \end_layout
 
 \begin_layout Standard
@@ -318,7 +313,7 @@ Where,
 \begin_inset Formula $\oplus$
 \end_inset
 
-is the XOR binary operator.
+ is the XOR binary operator.
 \end_layout
 
 \begin_layout Standard
