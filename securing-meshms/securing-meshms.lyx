@@ -409,16 +409,325 @@ As only the sender and recipient know one of the private keys required to
  perform the shared-secret calculation, they are the only parties who can
  determine the identity of the sender.
  This forms the basis of the entire solution.
- The remaining changes are to make the process as computationally efficient
- as possible.
+ As the sender of any given MeshMS bundle is randomised for each recipient,
+ an adversary can know only the number of parties who have sent a message
+ to a particular recipient.
+ The adversary cannot determine the number of parties that the recipient
+ has sent a message to, nor their identities, because no MeshMS bundles
+ bear the true identity of the sender.
+ Thus it is no longer possible to compute the entire social graph simply
+ by examining the manifests present on the mesh.
+\end_layout
+
+\begin_layout Standard
+The remaining changes described below are to make the process as computationally
+ efficient as possible.
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Deterministic-Bundle-ID"
+
+\end_inset
+
 Deterministic Bundle ID for Outbound Ply
+\end_layout
+
+\begin_layout Standard
+To simplify the sending of messages, it is proposed to compute the private
+ key for the bundle ID (BID) of the outgoing ply deterministically using:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $BID_{private}=SHA512("moose"+recipient\, SID+RS+"anconal"+recipient\, SID+"capital\, gains\, tax")$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Where the definitions from previous operations are retained, and 
+\begin_inset Formula $RS$
+\end_inset
+
+ is the Rhizome Secret from the sender's Serval Keyring.
+ As the public key of a bundle (BID) is a function of the private key (
+\begin_inset Formula $BID_{private}$
+\end_inset
+
+), the BID itself is precisely determined by this method.
+ Thus to send a message to a given recipient, the sender can directly compute
+ the BID that needs to be created or appended, without having to search
+ through existing conversations to determine the BID.
+ This approach also prevents the situation where the private key to a MeshMS
+ bundle can be lost by the sender, or where by some accident multiple bundles
+ might be created for the same ply of conversation.
 \end_layout
 
 \begin_layout Subsection
 Cached List of Outbound Ply & Conversation Status
+\end_layout
+
+\begin_layout Standard
+While deterministic calculation of a BID for an outgoing MeshMS bundle simplifie
+s sending a MeshMS message, it does not by itself simplify the listing of
+ existing conversations.
+ A complete pass through the list of manifests in a Rhizome database, with
+ each candidate being subjected to the procedure of Sub-section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Deterministic-Bundle-ID"
+
+\end_inset
+
+ to determine if it is part of a conversation sent by the listing party.
+ While this may be feasible for Rhizome databases with tens or hundreds
+ of bundles, it rapidly becomes unattractive as the Rhizome database size
+ grows, especially since there is no field of the manifest that can be indexed
+ to improve performance.
+\end_layout
+
+\begin_layout Standard
+It is therefore proposed to maintain a local encrypted file that contains
+ a list of BIDs that represent MeshMS conversations sent by the local party.
+ This reduces the Rhizome enquiry to the list of manifests that contain
+ the local party as recipient, which can be accelerated by indexing manifests
+ on the recipient field, as is already done in the Serval Mesh software.
+ This encrypted file can also contain conversation status information, in
+ particular the last message read in each conversation thread, so as to
+ provide the necessary information to support a convenient user interface.
+\end_layout
+
+\begin_layout Standard
+As the Serval Mesh supports multiple local identities which are unaware
+ of each others existence, the encrypted file must support the inclusion
+ of records that a given identity cannot decrypt.
+ The file shall consist of records of 128 bytes each.
+ The number of a particular record shall be the file offset at which the
+ record begins, divided by 128.
+ Thus the first record in the file will have number 0, monotonically increasing
+ thereafter.
+ The structure of each record shall be according to Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Conversation-Cache-Row"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Conversation-Cache-Row"
+
+\end_inset
+
+Conversation Cache Row Format.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Offset
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version (0x00010001).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SID of remote side of conversation.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BID of remote side of conversation.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+66
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Offset of remote side of conversation received.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+76
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Offset of remote side of conversation read.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+84
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SID of local side of conversation (used as checksum).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+116
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reserved (all zeroes).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
