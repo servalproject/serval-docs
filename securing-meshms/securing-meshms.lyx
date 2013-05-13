@@ -166,7 +166,7 @@ bundles
  by default encrypt the attached file using a symmetric cipher key derived
  from the Diffie-Hellman shared secret that can be derived from one public
  and one private key of the sender and recipient.
- That is, only the sender and recipient who have posession of one of the
+ That is, only the sender and recipient who have possession of one of the
  required private keys can encrypt or decrypt the file.
  This provides a mechanism for the protection of the content of a Rhizome-based
  communication.
@@ -218,7 +218,7 @@ meshms list conversations
  Group messaging is beyond the scope of the current paper.
  Plys are identified by their sender and recipient fields from the bundle
  meta-data.
- Thus the sender and recipient fields must be discernable by the recipient.
+ Thus the sender and recipient fields must be discernible by the recipient.
  This requirement of identifiability of parties by the corresponding parties
  complicates the objective of concealing their identities from non-corresponding
  parties.
@@ -238,7 +238,7 @@ The problem can be thus be restated as: how to arrange the manifest to contain
 \begin_layout Standard
 Moreover, the comprehension of corresponding parties of a conversation must
  be a rapid process, so that it can be performed in real-time on a mobile
- device that may be caching bundles for many correspondants other than itself.
+ device that may be caching bundles for many correspondents other than itself.
  This renders it attempt a cryptographic protocol on all MeshMS bundles,
  and there must be sufficient information available to the recipient to
  filter irrelevant bundles when seeking to identify plys that involve itself.
@@ -249,7 +249,7 @@ Candidate Solution
 \end_layout
 
 \begin_layout Subsection
-Obfruscate Sender
+Obfuscate Sender
 \end_layout
 
 \begin_layout Standard
@@ -392,8 +392,8 @@ That is, the sender takes the private key for their SID and the public key
 
 , corresponding to that key pair.
  This will be the same shared-secret as computed by the sender, and this
- is the basis for the reversability of this process.
- The psuedo-random bit stream, 
+ is the basis for the reversibility of this process.
+ The pseudo-random bit stream, 
 \begin_inset Formula $b$
 \end_inset
 
@@ -522,7 +522,7 @@ reference "tab:Conversation-Cache-Row"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -728,6 +728,16 @@ Reserved (all zeroes).
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Each row shall be encrypted using the 
+\family typewriter
+crypto_stream_xsalsa20
+\family default
+ primitive of the NaCl encryption library, where the SID of the local party
+ is used as the key, and the row number represented in little-endian binary
+ form is used as the nonce.
 \end_layout
 
 \end_body
