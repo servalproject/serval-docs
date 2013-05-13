@@ -245,19 +245,180 @@ Moreover, the comprehension of corresponding parties of a conversation must
 \end_layout
 
 \begin_layout Section
-Potential Solutions
-\end_layout
-
-\begin_layout Subsection
-Obfruscate Sender & Recipient
-\end_layout
-
-\begin_layout Subsection
-Obfruscate Recipient
+Candidate Solution
 \end_layout
 
 \begin_layout Subsection
 Obfruscate Sender
+\end_layout
+
+\begin_layout Standard
+The key requirement is to prevent the release of manifests that contains
+ both sender and recipient SID in a manner that an adversary can discern.
+ The proposed solution is to replace the sender field of the manifest with
+ a new ssender field.
+ The ssender field will be computed according to the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $sender=Disposable\, SID$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $SS=SharedSecret(Disposable\, SID\, private\, key,Recipient\, SID\, public\, key)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=SHA512("Salt\, String\,1"+SS+"Salt\, String\,2")$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ssender=b\oplus Sender\, SID$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where, 
+\begin_inset Formula $SharedSecret(a,b)$
+\end_inset
+
+ is the Curve25519 Diffie-Hellman shared secret function that is applicable
+ to Serval IDs (SIDs), 
+\begin_inset Formula $SHA512()$
+\end_inset
+
+ is the SHA 512 hash function, 
+\begin_inset Formula $+$
+\end_inset
+
+ represents string concatenation, and 
+\begin_inset Formula $\oplus$
+\end_inset
+
+is the XOR binary operator.
+\end_layout
+
+\begin_layout Standard
+That is, the sender takes the private key for the disposable SID and the
+ public key for the recipient's SID, computes the shared secret corresponding
+ to that key pair, and combines the result with two text strings, the result
+ of which is fed into the 
+\begin_inset Formula $SHA512()$
+\end_inset
+
+ hash function.
+ This produces a pseudo-random bit sequence as output, which is combined
+ with the sender's SID to produce the secured-sender (
+\begin_inset Formula $ssender$
+\end_inset
+
+) field of the manifest, and the disposable SID is used to populate the
+ plain-text sender (
+\begin_inset Formula $sender$
+\end_inset
+
+) field of the manifest.
+\end_layout
+
+\begin_layout Standard
+The recipient can decode the sender according to the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $SS=SharedSecret(Disposable\, SID\, public\, key,Recipient\, SID\, private\, key)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=SHA512("Salt\, String\,1"+SS+"Salt\, String\,2")$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $actual\, sender=b\oplus ssender$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+That is, the sender takes the private key for their SID and the public key
+ that is the disposable SID, and computes the shares secret, 
+\begin_inset Formula $SS$
+\end_inset
+
+, corresponding to that key pair.
+ This will be the same shared-secret as computed by the sender, and this
+ is the basis for the reversability of this process.
+ The psuedo-random bit stream, 
+\begin_inset Formula $b$
+\end_inset
+
+, is computed identically as for the sender, and is XORed with the 
+\begin_inset Formula $ssender$
+\end_inset
+
+ field from the manifest to produce the actual sender of the bundle.
+\end_layout
+
+\begin_layout Standard
+As only the sender and recipient know one of the private keys required to
+ perform the shared-secret calculation, they are the only parties who can
+ determine the identity of the sender.
+ This forms the basis of the entire solution.
+ The remaining changes are to make the process as computationally efficient
+ as possible.
+\end_layout
+
+\begin_layout Subsection
+Deterministic Bundle ID for Outbound Ply
+\end_layout
+
+\begin_layout Subsection
+Cached List of Outbound Ply & Conversation Status
 \end_layout
 
 \end_body
