@@ -2868,8 +2868,7 @@ y of words or word parts, but rather uses precomputed statistics for the
 
 \begin_layout Standard
 As shortBWT does not appear to be publicly avaiable, its performance can
- only be estimated by examining Figure 3 of Constantinescu et al (2004)
- 
+ only be estimated by examining Constantinescu et al (2004) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "doi:10.1117/12.507758"
@@ -2877,13 +2876,12 @@ key "doi:10.1117/12.507758"
 \end_inset
 
 .
- That figure suggests shortBWT is capable of compressing strings of 200
- characters to an average of around 55% of their original size.
- Performance on shorter strings is impossible to discern, as the various
- lines of the graph converge, but there is no reason to believe that performance
- would be any better on shorter strings, as shorter strings make it more
- difficult for the Burrows-Wheeler transform to find the redundancy necessary
- to effect compression.
+ That paper suggests shortBWT is capable of compressing strings of 200 character
+s to an average of around 55% of their original size.
+ Performance on shorter strings is impossible to discern from their paper,
+ but there is no reason to believe that performance would be any better
+ on shorter strings, as shorter strings make it more difficult for the Burrows-W
+heeler transform to find the redundancy necessary to effect compression.
 \end_layout
 
 \begin_layout Subsection
