@@ -314,6 +314,7 @@ Where,
 \end_inset
 
  is the XOR binary operator.
+ The SIDs are represented as hexadecimal strings in the hash calculation.
 \end_layout
 
 \begin_layout Standard
@@ -446,7 +447,8 @@ Where the definitions from previous operations are retained, and
 \begin_inset Formula $RS$
 \end_inset
 
- is the Rhizome Secret from the sender's Serval Keyring.
+ is the first 256 bytes of Rhizome Secret from the sender's Serval Keyring
+ converted to hexadecimal.
  As the public key of a bundle (BID) is a function of the private key (
 \begin_inset Formula $BID_{private}$
 \end_inset
@@ -489,21 +491,68 @@ It is therefore proposed to maintain a local encrypted file that contains
  This reduces the Rhizome enquiry to the list of manifests that contain
  the local party as recipient, which can be accelerated by indexing manifests
  on the recipient field, as is already done in the Serval Mesh software.
- This encrypted file can also contain conversation status information, in
- particular the last message read in each conversation thread, so as to
- provide the necessary information to support a convenient user interface.
+ 
 \end_layout
 
 \begin_layout Standard
-As the Serval Mesh supports multiple local identities which are unaware
- of each others existence, the encrypted file must support the inclusion
- of records that a given identity cannot decrypt.
- The file shall consist of records of 128 bytes each.
- The number of a particular record shall be the file offset at which the
- record begins, divided by 128.
- Thus the first record in the file will have number 0, monotonically increasing
- thereafter.
- The structure of each record shall be according to Table 
+If only the conversations are listed, the file will change only with the
+ addition of new conversations, and thus can reasonably be stored in Rhizome.
+ This has the attraction of maintaining the simplicity where the Serval
+ keyring file is the only file required to access an identity from any location,
+ provided that Rhizome is operating.
+\end_layout
+
+\begin_layout Standard
+As it is desirable in some use-cases to conceal the size of the social graph
+ of users on the mesh, the conversation list bundle will be created with
+ 256 slots initially, so that the size of this bundle will be quasi-constant.
+ This will make it more difficult for an adversary to discover the size
+ of a user's social graph.
+ The version number of this bundle will be randomised on creation, and increment
+ed by 1---
+\begin_inset Formula $2^{16}$
+\end_inset
+
+ each time it is modified to provide further protection against analysis.
+\end_layout
+
+\begin_layout Standard
+The conversation list bundle will use a BID that is deterministically calculated
+ for a given sender, making it easy to recall.
+ The manifest will not include an author, sender or recipient field to make
+ it more difficult for an adversary to determine the social graph size of
+ a given user.
+ The bundle will be encrypted using the normal Rhizome encryption mechanism.
+ The BID private key will be calculated according to:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $BID_{private}=SHA512("incorrection"+sender\, SID\, private\, key+"concentrativeness")$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is necessary to use the private key corresponding to the sender SID,
+ since deriving it from the public key would allow any party to determine
+ the conversation list BID for a given sender.
+\end_layout
+
+\begin_layout Standard
+The structure of each record shall be according to Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Conversation-Cache-Row"
@@ -517,11 +566,7 @@ reference "tab:Conversation-Cache-Row"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -545,7 +590,7 @@ Conversation Cache Row Format.
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="2">
+<lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -583,107 +628,7 @@ Description
 \begin_inset Text
 
 \begin_layout Plain Layout
-Version (0x00010001).
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 SID of remote side of conversation.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-36
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-BID of remote side of conversation.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-66
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Offset of remote side of conversation received.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-76
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Offset of remote side of conversation read.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-84
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-SID of local side of conversation (used as checksum).
 \end_layout
 
 \end_inset
@@ -694,7 +639,7 @@ SID of local side of conversation (used as checksum).
 \begin_inset Text
 
 \begin_layout Plain Layout
-116
+32
 \end_layout
 
 \end_inset
@@ -703,7 +648,7 @@ SID of local side of conversation (used as checksum).
 \begin_inset Text
 
 \begin_layout Plain Layout
-Reserved (all zeroes).
+BID of remote side of conversation.
 \end_layout
 
 \end_inset
@@ -716,23 +661,13 @@ Reserved (all zeroes).
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Each row shall be encrypted using the 
-\family typewriter
-crypto_stream_xsalsa20
-\family default
- primitive of the NaCl encryption library, where the SID of the local party
- is used as the key, and the row number represented in little-endian binary
- form is used as the nonce.
+
 \end_layout
 
 \end_body
