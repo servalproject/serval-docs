@@ -124,6 +124,11 @@ ompression using only a few KB of RAM for small devices that need to operate
  Reduces memory use by approximately 75%.
 \end_layout
 
+\begin_layout Standard
+- using average bit cost per symbol estimate for curve fitting as other
+ error measures do not target compresion performance of the curve
+\end_layout
+
 \begin_layout Section
 Things to cover
 \end_layout
@@ -155,13 +160,12 @@ Things to cover
 \end_layout
 
 \begin_layout Standard
-- remove all dependence on message_stats.c (except for word lists as an outgoing
- comparison)
+- no message_stats.c -- all stats are held in external file.
 \end_layout
 
 \begin_layout Standard
-- number compression: represent 0-9 with a single token, followed by explicitly
- coding the digit using [0..9] via range coding.
+- number compression (implemented): represent 0-9 with a single token, followed
+ by explicitly coding the digit using [0..9] via range coding.
  Should deal with order4 outperforming order6.
 \end_layout
 
@@ -179,6 +183,21 @@ Things to cover
  Table size will be 512 pages x (0x80 + 512 = 768) = 384K entries x sizeof(unsig
 ned int) = 1.5MB.
  Quite manageable.
+\end_layout
+
+\begin_layout Standard
+- representing distributions as permutation of alphabet + curve number (using
+ Cocho/Beta curve)
+\end_layout
+
+\begin_layout Standard
+- compression of permutations of alphabet
+\end_layout
+
+\begin_layout Standard
+- use of curves improves performance at lower count thresholds with higher-order
+ models, by reducing impact of poorly populated curves with only sparse
+ occurrences.
 \end_layout
 
 \begin_layout Section
